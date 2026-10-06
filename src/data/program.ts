@@ -65,7 +65,7 @@ export const schedule: ScheduleDay[] = [
 ];
 
 // Roles & responsibilities chart (Google doc "NetSci2027 Web content", Oct 2026).
-// Affiliations verified from institutional pages, Oct 2026. TODO: Kathrin Busch affiliation.
+// Affiliations verified from institutional pages, Oct 2026.
 export interface CommitteeGroup {
   role: string;
   members: { name: string; affiliation: string }[];
@@ -110,7 +110,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Henrik Olsson', affiliation: 'Complexity Science Hub Vienna' },
   ]},
   { role: 'Young Researcher Chair', members: [
-    { name: 'Kathrin Busch', affiliation: '' },
+    { name: 'Kathrin Busch', affiliation: 'University of Potsdam' },
   ]},
   { role: 'Web Chairs', members: [
     { name: 'Bao Tran Truong', affiliation: TUD },
