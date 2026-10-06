@@ -23,9 +23,9 @@ const fullTitle = `${title} — NetSci Dresden 2027`;
 
 <Layout title={fullTitle} description={description ?? lede}>
   <Navbar client:load />
-  <main>
+  <main class="ns26 bg-white font-['Rubik']">
     <PageHero eyebrow={eyebrow} title={title} lede={lede} crumbs={crumbs} />
-    <div class="max-w-6xl mx-auto px-4 lg:px-8 py-16">
+    <div class="max-w-6xl mx-auto px-4 lg:px-8 pb-16 pt-4">
       <slot />
     </div>
   </main>

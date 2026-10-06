@@ -6,8 +6,11 @@ export default {
       fontFamily: {
         display: ["Zilla Slab", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
+        rubik: ["Rubik", "system-ui", "sans-serif"],
       },
       colors: {
+        // NetSci 2026 site palette (inner pages follow netsci2026.com)
+        ns: { red: "#C50C0C", gray: "#7C7C7C", ink: "#171717", dark: "#242A2F", panel: "#EFEFEF" },
         // TU Dresden inspired palette
         tu: {
           deep: "#001A33",

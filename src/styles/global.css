@@ -127,3 +127,29 @@
   border-top: 1px solid rgba(0, 48, 99, 0.12);
   margin: 2rem 0;
 }
+
+
+/* ── NetSci 2026 look for inner pages (scoped to <main class="ns26">) ── */
+.ns26 { font-family: 'Rubik', system-ui, sans-serif; font-size: 1rem; color: #171717; }
+.ns26 h1, .ns26 h2, .ns26 h3, .ns26 h4, .ns26 .font-display {
+  font-family: 'Rubik', system-ui, sans-serif;
+  letter-spacing: 0;
+}
+/* Section headings: grey, regular weight (2026: ~33px #7C7C7C) */
+.ns26 h2, .ns26 h2.text-tu-deep { color: #7C7C7C; font-weight: 400; }
+.ns26 .prose-content { color: #171717; max-width: 48rem; }
+.ns26 .prose-content h2 { font-family: 'Rubik', system-ui, sans-serif; color: #7C7C7C; font-weight: 400; font-size: 1.9rem; margin-top: 2rem; }
+.ns26 .prose-content a, .ns26 a.underline { color: #242A2F; }
+.ns26 .prose-content a:hover { color: #C50C0C; }
+.ns26 .prose-content strong { color: #171717; }
+/* Cards: flat light-grey panels, no shadow/rounding; names in NetSci red */
+.ns26 .shadow-card {
+  background: #EFEFEF !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.ns26 .shadow-card h2, .ns26 .shadow-card h3 { color: #C50C0C; font-weight: 400; }
+.ns26 .text-tu-deep { color: #242A2F; }
+.ns26 .text-tu-blue { color: #7C7C7C; }
+.ns26 .bg-tu-navy { background-color: #7C7C7C; }

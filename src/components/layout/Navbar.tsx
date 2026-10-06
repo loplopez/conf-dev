@@ -37,7 +37,10 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 lg:px-8 h-16 flex items-center justify-between gap-6" aria-label="Main">
         {/* Logo */}
         <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
-          <img src="/netsci-logo.svg" alt="NetSci" className="h-9 w-auto" />
+          <span className="flex flex-col items-center leading-none">
+            <img src="/netsci-logo.svg" alt="NetSci" className="h-8 w-auto" />
+            <span className="font-['Rubik'] text-[13px] text-[#C50C0C] mt-0.5">Dresden 2027</span>
+          </span>
         </a>
 
         {/* Desktop menu */}
