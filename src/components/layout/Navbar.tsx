@@ -39,7 +39,7 @@ export default function Navbar() {
         <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
           <span className="flex flex-col items-center leading-none">
             <img src="/netsci-logo.svg" alt="NetSci" className="h-8 w-auto" />
-            <span className="font-['Rubik'] text-[13px] text-[#00008C] mt-0.5">Dresden 2027</span>
+            <span className="font-['Rubik'] text-[13px] text-[#003063] mt-0.5">Dresden 2027</span>
           </span>
         </a>
 

@@ -129,29 +129,29 @@
 }
 
 
-/* ── Inner pages: NetSci 2026 structure, NetSci 2027 palette (from the event.lab banner) ──
-   indigo #00008C (titles, buttons) · lavender #C8C8FF / #F0F0FF (panels, accents)
-   NetSci logo red #D1232A (names, link hover) · slate #5C5C7A (section headings) */
+/* ── Inner pages: NetSci 2026 structure, site palette (navy + gold, as landing/footer) ──
+   navy #003063 (titles, links, buttons) · ice #E8F1FB panels with gold #C9A24B stripe
+   blue #0F4D92 (names) · gold #C9A24B (link hover) · slate #5B6B7F (section headings) */
 .ns26 { font-family: 'Rubik', system-ui, sans-serif; font-size: 1rem; color: #171717; }
 .ns26 h1, .ns26 h2, .ns26 h3, .ns26 h4, .ns26 .font-display {
   font-family: 'Rubik', system-ui, sans-serif;
   letter-spacing: 0;
 }
-.ns26 h2, .ns26 h2.text-tu-deep { color: #5C5C7A; font-weight: 400; }
+.ns26 h2, .ns26 h2.text-tu-deep { color: #5B6B7F; font-weight: 400; }
 .ns26 .prose-content { color: #171717; max-width: 48rem; }
-.ns26 .prose-content h2 { font-family: 'Rubik', system-ui, sans-serif; color: #5C5C7A; font-weight: 400; font-size: 1.9rem; margin-top: 2rem; }
-.ns26 .prose-content a, .ns26 a.underline { color: #00008C; }
-.ns26 .prose-content a:hover { color: #D1232A; }
+.ns26 .prose-content h2 { font-family: 'Rubik', system-ui, sans-serif; color: #5B6B7F; font-weight: 400; font-size: 1.9rem; margin-top: 2rem; }
+.ns26 .prose-content a, .ns26 a.underline { color: #003063; }
+.ns26 .prose-content a:hover { color: #C9A24B; }
 .ns26 .prose-content strong { color: #171717; }
-.ns26 .prose-content ul li::marker { color: #00008C; }
+.ns26 .prose-content ul li::marker { color: #003063; }
 .ns26 .shadow-card {
-  background: #F0F0FF !important;
+  background: #E8F1FB !important;
   border: 0 !important;
-  border-left: 3px solid #C8C8FF !important;
+  border-left: 3px solid #C9A24B !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-.ns26 .shadow-card h2, .ns26 .shadow-card h3 { color: #D1232A; font-weight: 400; }
+.ns26 .shadow-card h2, .ns26 .shadow-card h3 { color: #0F4D92; font-weight: 400; }
 .ns26 .text-tu-deep { color: #242A2F; }
-.ns26 .text-tu-blue { color: #5C5C7A; }
-.ns26 .bg-tu-navy { background-color: #00008C; }
+.ns26 .text-tu-blue { color: #5B6B7F; }
+.ns26 .bg-tu-navy { background-color: #003063; }
