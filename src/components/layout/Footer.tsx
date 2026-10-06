@@ -26,7 +26,6 @@ export default function Footer() {
             <p>
               Contact: <a href="mailto:netsci@tu-dresden.de" className="underline hover:text-tu-gold">netsci@tu-dresden.de</a>
             </p>
-            <p className="text-xs text-white/50">Photo: DMG / Sylvio Dittrich (DML-BY)</p>
           </div>
           <div className="flex flex-col md:items-end gap-3">
             <div className="flex items-center gap-3">

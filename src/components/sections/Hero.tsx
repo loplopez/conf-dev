@@ -1,3 +1,4 @@
+import { u } from '../../lib/url';
 import { useTranslations } from '../../i18n/utils';
 
 const t = useTranslations();
@@ -12,65 +13,46 @@ interface Props {
   image: OptimizedImage;
 }
 
+// Layout follows the NetSci 2027 key visual (Entwurf_NetSci27_RG_15092026):
+// logo + partner logos on top, condensed caps subtitle, navy/lavender date block,
+// and the Dresden-network illustration rising behind the dates.
 export default function Hero({ image }: Props) {
-
   return (
-    <section className="relative w-full overflow-hidden">
-      <div className="relative h-screen w-full">
-        {/* Background photo: Dresden silhouette (DMG / Sylvio Dittrich, Dresden Media Licence DML-BY). */}
-        <img
-          src={image.src}
-          srcSet={image.srcSet}
-          sizes="100vw"
-          alt="Dresden skyline with Frauenkirche and Hofkirche over the Elbe"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          fetchPriority="high"
-        />
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/45" />
-
-        {/* Animated network (src/scripts/networks.ts; static for reduced motion) */}
-        <canvas data-network="dark" className="absolute inset-0 h-full w-full pointer-events-none" aria-hidden="true" />
-
-        {/* Photo credit (required by DML-BY licence) */}
-        <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/70 z-10">
-          Photo · DMG / Sylvio Dittrich (DML-BY)
+    <section className="relative w-full overflow-hidden bg-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 pt-8 md:pt-12">
+        <div className="flex items-start justify-between gap-6">
+          <img src={u('/netsci-logo.svg')} alt="NetSci" className="h-16 sm:h-20 md:h-28 w-auto" />
+          <img
+            src={u('/partners-synosys-tud.png')}
+            alt="SynoSys and Technische Universität Dresden"
+            className="hidden sm:block h-12 md:h-20 w-auto"
+          />
         </div>
 
-        {/* Content */}
-        <div className="relative h-full flex flex-col items-center justify-center px-6 text-center pt-16">
-          <div className="max-w-5xl mx-auto animate-fade-up">
-            <h1
-              className="font-sans text-7xl md:text-8xl lg:text-9xl font-light leading-[1] tracking-tight"
-              style={{ textShadow: '0 4px 18px rgba(0,0,0,0.55)' }}
-            >
-              <span className="text-white">NetSci</span>{' '}
-              <span style={{ color: '#D1232A' }}>2027</span>
-            </h1>
+        <h1 className="mt-5 md:mt-7 font-['Fira_Sans_Condensed'] font-semibold uppercase tracking-[0.02em] text-[#1A1A1A] text-lg sm:text-2xl md:text-[2rem] leading-tight">
+          <span className="sr-only">NetSci 2027: </span>
+          {t('hero.title').replace('|', ' ')}
+        </h1>
 
-            <p
-              className="mt-6 font-sans text-3xl md:text-4xl lg:text-5xl font-light text-white leading-[1.15]"
-              style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
-            >
-              {t('hero.title').split('|').map((line, i, arr) => (
-                <span key={i}>
-                  {line}
-                  {i < arr.length - 1 && <br />}
-                </span>
-              ))}
-            </p>
-
-            <p
-              className="mt-5 text-white text-lg md:text-xl font-medium tracking-wide"
-              style={{ textShadow: '0 1px 6px rgba(0,0,0,0.6)' }}
-            >
-              {t('hero.dates')}
-            </p>
-
-          </div>
+        <div className="mt-5 md:mt-8 inline-flex flex-col font-['Fira_Sans_Condensed'] uppercase">
+          <p className="bg-[#00008C] text-white font-bold text-3xl sm:text-4xl md:text-6xl px-4 md:px-5 py-2 md:py-3 leading-none">
+            May 17–21, 2027
+          </p>
+          <p className="bg-[#C8C8FF]/90 text-[#00008C] font-medium tracking-wide text-2xl sm:text-3xl md:text-5xl px-4 md:px-5 py-1.5 md:py-2.5 leading-none">
+            Dresden · Germany
+          </p>
         </div>
       </div>
+
+      {/* Illustration: Dresden skyline woven into a network (from the 2027 key visual). */}
+      <img
+        src={image.src}
+        srcSet={image.srcSet}
+        sizes="100vw"
+        alt="Illustrated Dresden skyline with Augustus Bridge, Frauenkirche and Hofkirche, overlaid with a network"
+        className="relative z-0 block w-full -mt-[6%] md:-mt-[17%] pointer-events-none select-none"
+        fetchPriority="high"
+      />
     </section>
   );
 }

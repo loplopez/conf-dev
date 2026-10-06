@@ -8,10 +8,10 @@ import Navbar from '../components/layout/Navbar.tsx';
 import Footer from '../components/layout/Footer.tsx';
 import Hero from '../components/sections/Hero.tsx';
 import NetworkBackground from '../components/ui/NetworkBackground.astro';
-import heroPhoto from '../assets/dresden-silhouette.jpg';
+import heroArt from '../assets/dresden-network.jpg';
 import { dates } from '../data/conference';
 
-const heroImg = await getImage({ src: heroPhoto, widths: [640, 1024, 1536, 1920], format: 'avif' });
+const heroImg = await getImage({ src: heroArt, widths: [640, 1024, 1536, 1920, 2560], format: 'avif' });
 const hero = { src: heroImg.src, srcSet: heroImg.srcSet.attribute };
 const speakers = (await getCollection('speakers')).sort((a, b) => a.data.order - b.data.order);
 const keynotes = speakers.filter((s) => s.data.category === 'Keynote');
@@ -42,7 +42,6 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
         <h2 class="text-4xl md:text-5xl font-light leading-tight">
           <span class="text-[#003063]">Breaking</span> <span class="text-[#5B6B7F]">boundaries</span>
         </h2>
-        <img src={u('/netsci-logo.svg')} alt="" class="mt-10 w-48 opacity-90" />
       </div>
       <div class="space-y-5 text-[16px] leading-relaxed">
         <p>
