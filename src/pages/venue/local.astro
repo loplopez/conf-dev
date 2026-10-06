@@ -1,0 +1,13 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ComingSoon from '../../components/ui/ComingSoon.astro';
+---
+
+<PageLayout title="Local Information" crumbs={[{ label: 'Home', href: '/' }, { label: 'Venue & Travel' }, { label: 'Local Information' }]}>
+  <ComingSoon note="Tips for your stay in Dresden will follow.">
+    <p class="mt-3 text-[#171717]">
+      In the meantime, Dresden's convention bureau has visitor information:
+      <a href="https://www.dresden-convention.com/" target="_blank" rel="noopener" class="underline text-[#003063]">dresden-convention.com</a>.
+    </p>
+  </ComingSoon>
+</PageLayout>

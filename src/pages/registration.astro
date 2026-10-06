@@ -1,13 +1,8 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import Registration, { registrationLede } from '../components/sections/Registration.tsx';
+import ComingSoon from '../components/ui/ComingSoon.astro';
 ---
 
-<PageLayout
-  title="Registration"
-  eyebrow="Join us in Dresden"
-  lede={registrationLede}
-  crumbs={[{ label: 'Home', href: '/' }, { label: 'Registration' }]}
->
-  <Registration />
+<PageLayout title="Registration" crumbs={[{ label: 'Home', href: '/' }, { label: 'Registration' }]}>
+  <ComingSoon note="Registration for NetSci 2027 will open soon. The early-bird registration deadline is 28 February 2027. Fees, what is included, and the cancellation policy will be published here." />
 </PageLayout>

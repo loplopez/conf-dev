@@ -1,32 +1,8 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { partners } from '../data/partners';
+import ComingSoon from '../components/ui/ComingSoon.astro';
 ---
 
-<PageLayout
-  title="Partners & Sponsors"
-  eyebrow="Support"
-  lede="NetSci 2027 is made possible by our hosts, partners, and sponsors."
-  crumbs={[{ label: 'Home', href: '/' }, { label: 'Partners' }]}
->
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-    {partners.map((p) => (
-      <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-8 flex items-center justify-center text-center min-h-[120px]">
-        <span class="font-display text-lg text-tu-deep">{p}</span>
-      </div>
-    ))}
-  </div>
-
-  <div class="mt-12 bg-tu-deep text-white rounded-2xl p-8 md:p-10 grid md:grid-cols-[1fr_auto] gap-6 items-center">
-    <div>
-      <h2 class="font-display text-2xl font-bold">Become a sponsor</h2>
-      <p class="mt-2 text-white/75 text-sm max-w-xl leading-relaxed">
-        Sponsorship packages give visibility to a global community of network scientists, from
-        students to senior researchers and industry. Get in touch for the prospectus.
-      </p>
-    </div>
-    <a href="mailto:netsci@tu-dresden.de" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-tu-deep font-semibold text-sm hover:bg-tu-gold transition-colors whitespace-nowrap">
-      Request prospectus
-    </a>
-  </div>
+<PageLayout title="Partners & Sponsors" crumbs={[{ label: 'Home', href: '/' }, { label: 'Partners & Sponsors' }]}>
+  <ComingSoon note="NetSci 2027 is hosted by the Center Synergy of Systems (SynoSys) at TU Dresden. Partners and sponsors will be announced here. Interested in sponsoring NetSci 2027? Get in touch." />
 </PageLayout>

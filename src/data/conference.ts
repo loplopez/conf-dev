@@ -5,6 +5,7 @@
 // ── Important dates ──────────────────────────
 
 export interface DateItem {
+  short: string; // as shown on the home timeline, e.g. "NOV 15"
   label: string;
   date: string;
   done: boolean;
@@ -12,13 +13,13 @@ export interface DateItem {
   primary?: boolean;
 }
 
-// Source: NetSci 2027 organising committee timeline (31 Aug 2026).
+// Source: NetSci 2027 organising committee timeline + 6 Oct decisions.
 export const dates: DateItem[] = [
-  { label: 'Satellite proposal deadline',          date: '15 November 2026', done: false, highlight: true },
-  { label: 'Abstract submission deadline',         date: '15 December 2026', done: false },
-  { label: 'Early bird registration deadline',     date: '28 February 2027', done: false },
-  { label: 'Satellites & School',                  date: '17 — 18 May 2027 (until midday)', done: false },
-  { label: 'Main conference',                      date: '18 — 21 May 2027', done: false, primary: true },
+  { short: 'NOV 15',    label: 'Satellite proposal deadline',      date: '15 November 2026', done: false, highlight: true },
+  { short: 'DEC 15',    label: 'Abstract submission deadline',     date: '15 December 2026', done: false },
+  { short: 'FEB 28',    label: 'Early bird registration deadline', date: '28 February 2027', done: false },
+  { short: 'MAY 17–18', label: 'Satellites & School',              date: '17 — 18 May 2027 (until midday)', done: false },
+  { short: 'MAY 18–21', label: 'NetSci 2027 Conference',           date: '18 — 21 May 2027', done: false, primary: true },
 ];
 
 // ── At-a-glance stats ────────────────────────

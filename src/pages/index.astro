@@ -1,22 +1,108 @@
 ---
-// Minimal landing per CTO request: hero only. No About/Dates/Contributions/Discover/Footer
-// until content is finalized. The other components remain in the repo and can be re-enabled
-// by importing them and adding them back to <main>.
+// Home — section order follows netsci2026.com: announcement bar, hero, about, key dates, speakers, footer.
 import { getImage } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/layout/Navbar.tsx';
 import Footer from '../components/layout/Footer.tsx';
 import Hero from '../components/sections/Hero.tsx';
 import heroPhoto from '../assets/dresden-silhouette.jpg';
+import { dates } from '../data/conference';
 
 const heroImg = await getImage({ src: heroPhoto, widths: [640, 1024, 1536, 1920], format: 'avif' });
 const hero = { src: heroImg.src, srcSet: heroImg.srcSet.attribute };
+const speakers = (await getCollection('speakers')).sort((a, b) => a.data.order - b.data.order);
+const keynotes = speakers.filter((s) => s.data.category === 'Keynote');
+const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
 ---
 
-<Layout title="NetSci Dresden 2027 — International Conference on Network Science">
+<Layout title="NetSci 2027 | International School and Conference on Network Science">
   <Navbar client:load />
-  <main>
+  <main class="font-['Rubik'] bg-white text-[#171717]">
+    <!-- Announcement bar (2026: "The program is now available") -->
+    <div class="pt-16">
+      <div class="bg-[#E8F1FB] border-b border-[#C9A24B]/40">
+        <p class="max-w-6xl mx-auto px-4 lg:px-8 py-3 text-center text-[15px] text-[#003063]">
+          Calls are open: <a href="/calls/satellites" class="underline hover:text-[#C9A24B]">satellite proposals</a> due 15 November,
+          <a href="/calls/abstracts" class="underline hover:text-[#C9A24B]">abstracts</a> due 15 December 2026.
+        </p>
+      </div>
+    </div>
+
     <Hero image={hero} />
+
+    <!-- About (2026: "20 years of NetSci") -->
+    <section class="max-w-6xl mx-auto px-4 lg:px-8 py-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-light leading-tight">
+          <span class="text-[#003063]">Beyond</span> <span class="text-[#5B6B7F]">boundaries</span>
+        </h2>
+        <img src="/netsci-logo.svg" alt="" class="mt-10 w-48 opacity-90" />
+      </div>
+      <div class="space-y-5 text-[16px] leading-relaxed">
+        <p>
+          NetSci is the flagship conference of the
+          <a href="https://netscisociety.net" class="underline text-[#003063] hover:text-[#C9A24B]">Network Science Society</a>
+          and the premier venue for sharing and discussing discoveries, ideas, and emerging challenges in
+          network science, from social and information networks to epidemics and public health, ecological
+          and biological systems, the brain, infrastructure, and AI-driven systems.
+        </p>
+        <p>
+          NetSci 2027 asks what lies beyond the field's current boundaries. We invite work that is
+          forward-looking and willing to take risks, that connects network science to new problems and
+          disciplines, and we put young researchers at the centre of the program.
+        </p>
+        <p>
+          NetSci 2027 is hosted by the Center Synergy of Systems
+          (<a href="https://tu-dresden.de/cids/departments/synosys" class="underline text-[#003063] hover:text-[#C9A24B]">SynoSys</a>)
+          at TU Dresden and takes place in Dresden, Germany, from 17 to 21 May 2027: satellites and the
+          school on 17–18 May, followed by the main conference from 18 to 21 May.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key dates (2026: vertical timeline) -->
+    <section class="max-w-6xl mx-auto px-4 lg:px-8 pb-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-light text-[#003063]">Key dates</h2>
+        <p class="mt-4 text-[#5B6B7F] max-w-xs">Please take note of key dates and deadlines for NetSci 2027.</p>
+      </div>
+      <ol class="relative border-l-2 border-[#003063] ml-28 space-y-7 py-2">
+        {dates.map((d) => (
+          <li class="relative pl-6">
+            <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#003063]"></span>
+            <span class:list={['absolute -left-28 w-24 text-right text-sm tracking-wide', d.primary ? 'font-semibold text-[#003063]' : 'text-[#C9A24B]']}>{d.short}</span>
+            <span class:list={[d.primary ? 'font-semibold text-[#171717]' : 'text-[#171717]', d.done && 'line-through text-[#5B6B7F]']}>{d.label}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <!-- Speakers (2026: featured speaker) -->
+    <section class="bg-[#E8F1FB]">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8 py-16">
+        <h2 class="text-4xl md:text-5xl font-light text-[#003063]">Speakers</h2>
+        <h3 class="mt-8 text-xl font-light text-[#5B6B7F]">Keynotes</h3>
+        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {keynotes.map((s) => (
+            <li class="bg-white border-l-4 border-[#C9A24B] px-4 py-3">
+              <p class="text-[#0F4D92]">{s.data.name}</p>
+              <p class="text-sm text-[#5B6B7F]">{s.data.affiliation}</p>
+            </li>
+          ))}
+        </ul>
+        <h3 class="mt-8 text-xl font-light text-[#5B6B7F]">Breaking Boundaries</h3>
+        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {bb.map((s) => (
+            <li class="bg-white border-l-4 border-[#C9A24B] px-4 py-3">
+              <p class="text-[#0F4D92]">{s.data.name}</p>
+              <p class="text-sm text-[#5B6B7F]">{s.data.affiliation}</p>
+            </li>
+          ))}
+        </ul>
+        <a href="/program/speakers" class="inline-block mt-8 text-[#003063] underline hover:text-[#C9A24B]">All speakers →</a>
+      </div>
+    </section>
   </main>
-  <Footer minimal />
+  <Footer />
 </Layout>

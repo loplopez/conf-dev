@@ -1,33 +1,8 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import Prose from '../../components/ui/Prose.tsx';
+import ComingSoon from '../../components/ui/ComingSoon.astro';
 ---
 
-<PageLayout
-  title="Conference Awards"
-  eyebrow="About"
-  lede="Recognising outstanding contributions presented at NetSci 2027."
-  crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Awards' }]}
->
-  <Prose>
-    <h2>Best Talk Award</h2>
-    <p>
-      Awarded to the most outstanding contributed talk, judged on scientific quality, novelty, and
-      clarity of presentation. All contributed talks are automatically eligible.
-    </p>
-    <h2>Best Poster Award</h2>
-    <p>
-      Selected by a committee across both poster sessions. Presenters should be at their poster
-      during their assigned session for consideration.
-    </p>
-    <h2>Young Researcher Award</h2>
-    <p>
-      Recognising an early-career researcher (PhD students and those within three years of their
-      PhD) for an exceptional contribution. Indicate eligibility during submission.
-    </p>
-    <hr />
-    <p>
-      Winners are announced during the awards and closing session on <strong>Friday 19 June</strong>.
-    </p>
-  </Prose>
+<PageLayout title="Conference Awards" crumbs={[{ label: 'Home', href: '/' }, { label: 'About' }, { label: 'Conference Awards' }]}>
+  <ComingSoon note="Details on the NetSci 2027 awards will be announced here." />
 </PageLayout>
