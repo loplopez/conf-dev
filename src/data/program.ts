@@ -76,7 +76,6 @@ const TUD = 'TU Dresden';
 export const committees: CommitteeGroup[] = [
   { role: 'General Chairs', members: [
     { name: 'Philipp Hövel', affiliation: 'Saarland University' },
-    { name: 'Thilo Gross', affiliation: 'HIFMB, University of Oldenburg' },
   ]},
   { role: 'Local Organizers', members: [
     { name: 'Dirk Brockmann', affiliation: TUD },
