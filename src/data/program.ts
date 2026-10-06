@@ -74,7 +74,7 @@ export interface CommitteeGroup {
 const TUD = 'TU Dresden';
 
 export const committees: CommitteeGroup[] = [
-  { role: 'General Chairs', members: [
+  { role: 'General Chair', members: [
     { name: 'Philipp Hövel', affiliation: 'Saarland University' },
   ]},
   { role: 'Local Organizers', members: [
