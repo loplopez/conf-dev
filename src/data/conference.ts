@@ -16,8 +16,6 @@ export interface DateItem {
 export const dates: DateItem[] = [
   { label: 'Satellite proposal deadline',          date: '15 November 2026', done: false, highlight: true },
   { label: 'Abstract submission deadline',         date: '15 December 2026', done: false },
-  { label: 'Satellite notification',               date: '15 December 2026', done: false },
-  { label: 'Abstract notification',                date: '15 January 2027',  done: false },
   { label: 'Early bird registration deadline',     date: '28 February 2027', done: false },
   { label: 'Satellites & School',                  date: '17 — 18 May 2027 (until midday)', done: false },
   { label: 'Main conference',                      date: '18 — 21 May 2027', done: false, primary: true },
