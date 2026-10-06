@@ -12,14 +12,14 @@ export interface DateItem {
   primary?: boolean;
 }
 
+// Source: NetSci 2027 organising committee timeline (31 Aug 2026).
 export const dates: DateItem[] = [
-  { label: 'Satellite proposal deadline',      date: '5 December 2025',  done: true },
-  { label: 'Abstract submission deadline',     date: '12 December 2025', done: true },
-  { label: 'Abstract notification',            date: '30 January 2027',  done: true },
-  { label: 'Early bird registration deadline', date: '6 March 2027',     done: false, highlight: true },
-  { label: 'Travel grant application deadline',date: '20 March 2027',    done: false },
-  { label: 'Late-breaking work deadline',      date: '10 April 2027',    done: false },
-  { label: 'Conference dates',                 date: '17 — 21 May 2027', done: false, primary: true },
+  { label: 'Satellite proposal deadline',          date: '15 November 2026', done: false, highlight: true },
+  { label: 'Abstract submission deadline',         date: '15 December 2026', done: false },
+  { label: 'Satellite notification',               date: '15 December 2026', done: false },
+  { label: 'Abstract notification',                date: '15 January 2027',  done: false },
+  { label: 'Early bird registration deadline',     date: '28 February 2027', done: false },
+  { label: 'Conference opens',                     date: '18 May 2027',      done: false, primary: true },
 ];
 
 // ── At-a-glance stats ────────────────────────

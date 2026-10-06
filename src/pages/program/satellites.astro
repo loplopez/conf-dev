@@ -17,6 +17,14 @@ const satellites = (await getCollection('satellites')).sort(
     { label: 'Satellites' },
   ]}
 >
+  {satellites.length === 0 && (
+    <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-8 text-tu-ink/80">
+      <p>
+        Accepted satellites will be announced here after notification on 15 December 2026.
+        Want to organise one? See the <a href="/calls/satellites" class="text-tu-blue underline">Call for Satellites</a>.
+      </p>
+    </div>
+  )}
   <div class="space-y-5">
     {satellites.map((sat) => (
       <article

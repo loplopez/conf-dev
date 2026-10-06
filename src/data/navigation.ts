@@ -28,7 +28,14 @@ export const navItems: NavItem[] = [
       { key: 'nav.about.conduct', href: '/about/code-of-conduct' },
     ],
   },
-  { key: 'nav.calls', href: '/calls' },
+  {
+    key: 'nav.calls',
+    href: '/calls',
+    children: [
+      { key: 'nav.calls.abstracts', href: '/calls/abstracts' },
+      { key: 'nav.calls.satellites', href: '/calls/satellites' },
+    ],
+  },
   {
     key: 'nav.program',
     href: '/program',

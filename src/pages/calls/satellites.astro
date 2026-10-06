@@ -1,0 +1,65 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Prose from '../../components/ui/Prose.tsx';
+
+// Structure and proposal contents adapted from netsci2026.com/call-for-satellites.
+// TODO(chairs): confirm proposal contents, review criteria, organiser perks (2026 gave
+// full-day organisers one free registration) and satellite dates for 2027.
+const EMAIL = 'satellites.netsci@tu-dresden.de';
+---
+
+<PageLayout
+  title="Call for Satellites"
+  eyebrow="Calls"
+  lede="Propose a satellite symposium at NetSci 2027 in Dresden. Deadline: 15 November 2026."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'Calls', href: '/calls' }, { label: 'Satellites' }]}
+>
+  <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10">
+    <Prose>
+      <h2>What is a satellite?</h2>
+      <p>
+        Satellites are community-organised, half-day or full-day symposia on a focused topic in
+        network science, held alongside the main conference. They are a chance to bring together
+        a community around an emerging question, method, or application.
+      </p>
+
+      <h2>How to submit a proposal</h2>
+      <p>Send a single PDF that includes:</p>
+      <ul>
+        <li>A descriptive title</li>
+        <li>A short summary of the topic, its aims, and expected outcomes</li>
+        <li>Names, affiliations, and email addresses of all organisers</li>
+        <li>Preferred format (half or full day) and planned structure</li>
+        <li>Preliminary list of confirmed or invited speakers</li>
+      </ul>
+      <p>
+        Email your proposal to <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+      </p>
+
+      <h2>Organiser responsibilities</h2>
+      <p>
+        Organisers of accepted satellites manage their speakers, finalise their program, handle
+        communication with participants, and follow the conference deadlines.
+      </p>
+    </Prose>
+
+    <aside class="space-y-6 h-fit">
+      <div data-reveal class="bg-tu-deep text-white rounded-2xl p-7">
+        <h2 class="font-display text-lg font-bold">Submit a proposal</h2>
+        <p class="mt-2 text-sm text-white/75">Deadline: 15 November 2026</p>
+        <a
+          href={`mailto:${EMAIL}?subject=${encodeURIComponent('NetSci 2027 Satellite Proposal')}`}
+          class="mt-5 inline-block bg-tu-gold text-tu-deep font-semibold rounded-full px-5 py-2.5 hover:opacity-90"
+        >Email your proposal</a>
+      </div>
+      <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-7">
+        <h2 class="font-display text-lg font-bold text-tu-deep">Key dates</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex justify-between gap-3"><span>Proposal deadline</span><span class="font-mono text-tu-ink/70">15 Nov 2026</span></li>
+          <li class="flex justify-between gap-3"><span>Notification</span><span class="font-mono text-tu-ink/70">15 Dec 2026</span></li>
+          <li class="flex justify-between gap-3"><span>Satellites announced</span><span class="font-mono text-tu-ink/70">Dec 2026 – Jan 2027</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</PageLayout>

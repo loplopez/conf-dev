@@ -1,0 +1,80 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Prose from '../../components/ui/Prose.tsx';
+import { contributions } from '../../data/conference';
+
+// Structure mirrors netsci2026.com/call-for-abstracts.
+// TODO(chairs): conference topics list, abstract rules (one per presenter? in-person only?),
+// and review criteria are not confirmed for 2027 — add once the program chairs approve.
+const SUBMIT_URL = 'https://netsci2027.eventclass.it/';
+const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstract-template/gqryjjnvrczn';
+---
+
+<PageLayout
+  title="Call for Abstracts"
+  eyebrow="Calls"
+  lede="Submit your work on any topic in network science as a one-page abstract. Deadline: 15 December 2026."
+  crumbs={[{ label: 'Home', href: '/' }, { label: 'Calls', href: '/calls' }, { label: 'Abstracts' }]}
+>
+  <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10">
+    <Prose>
+      <h2>Submissions</h2>
+      <p>
+        We invite one-page abstracts across all areas of network science. Abstracts are reviewed by
+        the Program Committee and accepted as a contributed talk, a lightning talk, or a poster.
+      </p>
+
+      <h2>Presentation formats</h2>
+      <ul>
+        {contributions.map((c) => (
+          <li><strong>{c.title}</strong> ({c.spec}): {c.desc}</li>
+        ))}
+      </ul>
+
+      <h2>How to submit</h2>
+      <ol>
+        <li>
+          Prepare your abstract with the official
+          <a href={TEMPLATE_URL} target="_blank" rel="noopener">NetSci 2027 LaTeX template on Overleaf</a>.
+        </li>
+        <li>
+          Submit the PDF through the
+          <a href={SUBMIT_URL} target="_blank" rel="noopener">NetSci 2027 submission system</a>.
+        </li>
+      </ol>
+
+      <h2>Questions</h2>
+      <p>
+        Write to <a href="mailto:program.netsci@tu-dresden.de">program.netsci@tu-dresden.de</a>.
+      </p>
+    </Prose>
+
+    <aside class="space-y-6 h-fit">
+      <div data-reveal class="bg-tu-deep text-white rounded-2xl p-7">
+        <h2 class="font-display text-lg font-bold">Submit your abstract</h2>
+        <p class="mt-2 text-sm text-white/75">Deadline: 15 December 2026</p>
+        <a
+          href={SUBMIT_URL}
+          target="_blank"
+          rel="noopener"
+          class="mt-5 inline-block bg-tu-gold text-tu-deep font-semibold rounded-full px-5 py-2.5 hover:opacity-90"
+        >Go to submission system</a>
+        <a
+          href={TEMPLATE_URL}
+          target="_blank"
+          rel="noopener"
+          class="mt-3 block text-sm text-white/80 underline hover:text-tu-gold"
+        >Download the LaTeX template</a>
+      </div>
+      <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-7">
+        <h2 class="font-display text-lg font-bold text-tu-deep">Key dates</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex justify-between gap-3"><span>Submission deadline</span><span class="font-mono text-tu-ink/70">15 Dec 2026</span></li>
+          <li class="flex justify-between gap-3"><span>Notification</span><span class="font-mono text-tu-ink/70">15 Jan 2027</span></li>
+          <li class="flex justify-between gap-3"><span>Early bird registration</span><span class="font-mono text-tu-ink/70">28 Feb 2027</span></li>
+          <li class="flex justify-between gap-3"><span>Conference opens</span><span class="font-mono text-tu-ink/70">18 May 2027</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</PageLayout>

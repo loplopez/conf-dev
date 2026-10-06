@@ -1,7 +1,7 @@
 import { cn } from '../../lib/cn';
 
 // Fee tiers mirror the NetSci conference-series structure, localized to
-// Dresden 2027 (conference dates: 17 — 21 May 2027).
+// Dresden 2027 (conference opens 18 May 2027).
 const earlyDeadline = '5 February 2027';
 const onlineDeadline = '6 May 2027';
 

@@ -5,8 +5,10 @@ const speakers = defineCollection({
   schema: z.object({
     name: z.string(),
     affiliation: z.string(),
-    talkTitle: z.string(),
-    field: z.string(),
+    category: z.enum(['Keynote', 'Breaking Boundaries']),
+    talkTitle: z.string().optional(),
+    field: z.string().optional(),
+    photo: z.string().optional(), // path under /public, e.g. /speakers/vespignani.jpg
     order: z.number().default(99),
     featured: z.boolean().default(false),
   }),
