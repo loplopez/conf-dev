@@ -4,23 +4,38 @@ import Prose from '../../components/ui/Prose.tsx';
 import { contributions } from '../../data/conference';
 
 // Structure, topics and rules adopted from netsci2026.com/call-for-abstracts (decided 6 Oct 2026);
-// lightning talks dropped for 2027; generative-AI policy added.
+// lightning talks dropped for 2027; topics and AI rule from the program chairs (6 Oct 2026).
 const topics = [
-  'Network models and inference',
-  'Statistical physics of networks',
-  'Temporal, multilayer, and adaptive networks',
-  'Higher-order and hypergraph structures',
-  'Network geometry and topology',
-  'Dynamics on and of networks (spreading, synchronization, control)',
-  'Network resilience and percolation',
-  'Graph machine learning and data-driven methods',
-  'Network visualization and measurement',
-  'Biological, ecological, and brain networks',
-  'Social, cultural, and linguistic networks',
-  'Mobility, infrastructure, and urban systems',
-  'Financial and economic networks',
-  'Network medicine and health',
-  'Ethics, fairness, and education in network science',
+  'Adaptive Networks',
+  'Biological Networks',
+  'Brain Networks',
+  'Critical Phenomena In Networks',
+  'Cultural And Historical Network Analysis',
+  'Dynamics On Networks',
+  'Ecological Networks',
+  'Ethics And Fairness In Network Analysis',
+  'Financial Networks',
+  'Graph Machine Learning',
+  'Higher-Order Networks',
+  'Linguistic Networks',
+  'Mobility Networks',
+  'Models Of Networks',
+  'Multilayer Networks',
+  'Network Control',
+  'Network Data Collection',
+  'Network Epidemiology',
+  'Network Geometry',
+  'Network Measures And Metrics',
+  'Network Resilience',
+  'Network Science and Education',
+  'Network Visualization',
+  'Signed Networks',
+  'Social Networks',
+  'Spatial Networks',
+  'Statistical Analysis Of Networks And Inference',
+  'Synchronization and control',
+  'Technological Networks',
+  'Temporal Networks',
 ];
 const SUBMIT_URL = 'https://netsci2027.eventclass.it/';
 const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstract-template/gqryjjnvrczn';
@@ -51,6 +66,7 @@ const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstra
         <li>Each accepted abstract must be presented in person by one of its authors.</li>
         <li>Each author may present only one abstract at the main conference.</li>
         <li>Presenting authors must register by the presenter deadline to appear in the final program.</li>
+        <li>Irresponsible use of generative AI for fabricating content will not be accepted. Such submissions will be desk rejected, and repeated occurrence will be recorded.</li>
       </ul>
 
       <h2>Conference topics</h2>
@@ -77,14 +93,6 @@ const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstra
           <a href={SUBMIT_URL} target="_blank" rel="noopener">NetSci 2027 submission system</a>.
         </li>
       </ol>
-
-      <h2>Use of generative AI</h2>
-      <p>
-        Authors are fully responsible for the accuracy, originality, and scholarly quality of their
-        submissions, whether or not AI tools were used. Submissions showing blatant, irresponsible use of
-        generative AI (such as fabricated claims or references, or incoherent, unsupported content) will be
-        desk rejected, and the case will be recorded.
-      </p>
 
       <h2>Questions</h2>
       <p>
@@ -113,6 +121,7 @@ const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstra
         <h2 class="font-display text-lg font-bold text-tu-deep">Key dates</h2>
         <ul class="mt-4 space-y-3 text-sm">
           <li class="flex justify-between gap-3"><span>Submission deadline</span><span class="font-mono text-tu-ink/70">15 Dec 2026</span></li>
+          <li class="flex justify-between gap-3"><span>Notification of acceptance</span><span class="font-mono text-tu-ink/70">TBD</span></li>
           <li class="flex justify-between gap-3"><span>Early bird registration</span><span class="font-mono text-tu-ink/70">28 Feb 2027</span></li>
           <li class="flex justify-between gap-3"><span>Satellites &amp; School</span><span class="font-mono text-tu-ink/70">17–18 May 2027</span></li>
           <li class="flex justify-between gap-3"><span>Main conference</span><span class="font-mono text-tu-ink/70">18–21 May 2027</span></li>

@@ -61,7 +61,7 @@ export const contributions: Contribution[] = [
     icon: 'M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-7 0h8M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z',
     title: 'Posters',
     spec: 'A0 portrait · vertical',
-    desc: 'Pins will be provided on-site. Local printing partners are listed in the practical information page.',
+    desc: 'Pins will be provided on-site.',
   },
 ];
 

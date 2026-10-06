@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { u } from '../../lib/url';
 
 const all = (await getCollection('speakers')).sort((a, b) => a.data.order - b.data.order);
 const groups = [
@@ -34,7 +35,7 @@ const groups = [
             <article class="shadow-card p-6 md:p-8 flex flex-col sm:flex-row gap-6 items-start">
               {s.data.photo ? (
                 <img
-                  src={s.data.photo}
+                  src={u(s.data.photo)}
                   alt={s.data.name}
                   class="w-32 h-32 rounded-full object-cover shrink-0"
                   loading="lazy"
