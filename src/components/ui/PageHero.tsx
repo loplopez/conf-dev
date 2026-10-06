@@ -24,7 +24,7 @@ export default function PageHero({ title, lede, crumbs = [] }: Props) {
               {crumbs.map((c, i) => (
                 <li key={i} className="flex items-center gap-2">
                   {c.href ? (
-                    <a href={c.href} className="hover:text-[#C50C0C] transition-colors">{c.label}</a>
+                    <a href={c.href} className="hover:text-[#00008C] transition-colors">{c.label}</a>
                   ) : (
                     <span className="text-[#242A2F]">{c.label}</span>
                   )}
@@ -34,7 +34,7 @@ export default function PageHero({ title, lede, crumbs = [] }: Props) {
             </ol>
           </nav>
         )}
-        <h1 className="font-['Rubik'] text-4xl md:text-5xl font-light leading-tight text-[#C50C0C]">{title}</h1>
+        <h1 className="font-['Rubik'] text-4xl md:text-5xl font-light leading-tight text-[#00008C]">{title}</h1>
         {lede && <p className="mt-4 text-base text-[#171717] max-w-3xl leading-relaxed">{lede}</p>}
       </div>
     </section>
