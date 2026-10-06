@@ -80,18 +80,19 @@ The same code builds two sites (see `.github/workflows/deploy.yml`):
 | Repo | URL | What it shows |
 |---|---|---|
 | `netsci2027/netsci2027.github.io` | https://netsci2027.github.io | Public site: landing page only, menu hidden |
-| `netsci2027/dev` | https://netsci2027.github.io/dev | Dev preview: full site with menu, for sharing with the team |
+| `loplopez/conf-dev` (or any other copy) | https://loplopez.github.io/conf-dev | Dev preview: full site with menu, for sharing with the team |
 
-The workflow picks `BASE_PATH` (`/` or `/dev`) and `PUBLIC_FULL_SITE` (`0` or `1`) from the repository name.
+Any repository other than `netsci2027/netsci2027.github.io` builds the full site under `/<repo-name>`;
+the workflow sets `SITE_URL`, `BASE_PATH` and `PUBLIC_FULL_SITE` from the repository.
 Locally, `npm run dev` always shows the full site (`.env.development`).
 
-Publish the dev preview:
+Publish the dev preview (the repo needs Settings → Pages → Source: GitHub Actions):
 
 ```bash
-git remote add dev https://github.com/netsci2027/dev.git   # once
-git push dev main                                           # every time you want to update it
+git remote add dev https://github.com/loplopez/conf-dev.git   # once
+git push dev main                                              # every time you want to update it
 ```
 
-Internal links and `/public` assets must use `u('/path')` from `src/lib/url.ts` so they work under `/dev`.
+Internal links and `/public` assets must use `u('/path')` from `src/lib/url.ts` so they work under a sub-path such as `/conf-dev`.
 
 To launch the full public site, set `PUBLIC_FULL_SITE` to `'1'` for the main repo in the workflow.

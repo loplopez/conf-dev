@@ -3,13 +3,14 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
-// BASE_PATH is "/" for the public site and "/dev" for the dev preview
-// (set by .github/workflows/deploy.yml depending on the repository).
+// SITE_URL and BASE_PATH are set by .github/workflows/deploy.yml from the repository:
+// "/" on https://netsci2027.github.io, "/<repo>" for a dev preview (e.g. /conf-dev).
 const base = process.env.BASE_PATH || '/';
+const site = process.env.SITE_URL || 'https://netsci2027.github.io';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://netsci2027.github.io',
+  site,
   base,
   // Astro is the framework; it builds with Vite and renders React components.
   integrations: [react(), tailwind(), sitemap()],
