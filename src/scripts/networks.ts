@@ -46,7 +46,7 @@ function makeCluster(w: number, h: number): Cluster {
 
 function animate(canvas: HTMLCanvasElement) {
   const dark = canvas.dataset.network === 'dark';
-  const LINK = dark ? '255, 255, 255' : '0, 48, 99';
+  const LINK = dark ? '255, 255, 255' : '0, 0, 140';
   const linkA = dark ? 0.12 : 0.06;
   const nodeA = dark ? 0.3 : 0.15;
   const ctx = canvas.getContext('2d')!;

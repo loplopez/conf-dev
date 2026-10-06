@@ -125,34 +125,34 @@
 }
 .prose-content hr {
   border: none;
-  border-top: 1px solid rgba(0, 48, 99, 0.12);
+  border-top: 1px solid rgba(0, 0, 140, 0.12);
   margin: 2rem 0;
 }
 
 
-/* ── Inner pages: NetSci 2026 structure, site palette (navy + gold, as landing/footer) ──
-   navy #003063 (titles, links, buttons) · ice #E8F1FB panels with gold #C9A24B stripe
-   blue #0F4D92 (names) · gold #C9A24B (link hover) · slate #5B6B7F (section headings) */
+/* ── Inner pages: NetSci 2026 structure, 2027 key-visual palette ──
+   indigo #00008C (titles, links, buttons) · lavender #EEEEFF panels with orange #FFBE78 stripe
+   blue #2F6DB5 (names) · NetSci red #D1232A (link hover) · slate #66668F (section headings) */
 .ns26 { font-family: 'Rubik', system-ui, sans-serif; font-size: 1rem; color: #171717; }
 .ns26 h1, .ns26 h2, .ns26 h3, .ns26 h4, .ns26 .font-display {
   font-family: 'Rubik', system-ui, sans-serif;
   letter-spacing: 0;
 }
-.ns26 h2, .ns26 h2.text-tu-deep { color: #5B6B7F; font-weight: 400; }
+.ns26 h2, .ns26 h2.text-tu-deep { color: #66668F; font-weight: 400; }
 .ns26 .prose-content { color: #171717; max-width: 48rem; }
-.ns26 .prose-content h2 { font-family: 'Rubik', system-ui, sans-serif; color: #5B6B7F; font-weight: 400; font-size: 1.9rem; margin-top: 2rem; }
-.ns26 .prose-content a, .ns26 a.underline { color: #003063; }
-.ns26 .prose-content a:hover { color: #C9A24B; }
+.ns26 .prose-content h2 { font-family: 'Rubik', system-ui, sans-serif; color: #66668F; font-weight: 400; font-size: 1.9rem; margin-top: 2rem; }
+.ns26 .prose-content a, .ns26 a.underline { color: #00008C; }
+.ns26 .prose-content a:hover { color: #D1232A; }
 .ns26 .prose-content strong { color: #171717; }
-.ns26 .prose-content ul li::marker { color: #003063; }
+.ns26 .prose-content ul li::marker { color: #00008C; }
 .ns26 .shadow-card {
-  background: #E8F1FB !important;
+  background: #EEEEFF !important;
   border: 0 !important;
-  border-left: 3px solid #C9A24B !important;
+  border-left: 3px solid #FFBE78 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-.ns26 .shadow-card h2, .ns26 .shadow-card h3 { color: #0F4D92; font-weight: 400; }
+.ns26 .shadow-card h2, .ns26 .shadow-card h3 { color: #2F6DB5; font-weight: 400; }
 .ns26 .text-tu-deep { color: #242A2F; }
-.ns26 .text-tu-blue { color: #5B6B7F; }
-.ns26 .bg-tu-navy { background-color: #003063; }
+.ns26 .text-tu-blue { color: #66668F; }
+.ns26 .bg-tu-navy { background-color: #00008C; }

@@ -11,22 +11,22 @@ export default {
       colors: {
         // NetSci 2026 site palette (inner pages follow netsci2026.com)
         ns: { red: "#C50C0C", gray: "#7C7C7C", ink: "#171717", dark: "#242A2F", panel: "#EFEFEF" },
-        // TU Dresden inspired palette
+        // 2027 key-visual palette (names kept from the earlier TU palette)
         tu: {
-          deep: "#001A33",
-          navy: "#003063",
-          blue: "#0F4D92",
-          sky: "#3A75C4",
-          ice: "#E8F1FB",
+          deep: "#00005C",
+          navy: "#00008C",
+          blue: "#2F6DB5",
+          sky: "#4186C7",
+          ice: "#EEEEFF",
           cream: "#F5F1EA",
-          gold: "#C9A24B",
+          gold: "#FFBE78",
           ember: "#B5471B",
           ink: "#0B1726",
         },
       },
       boxShadow: {
-        soft: "0 10px 40px -10px rgba(0, 26, 51, 0.25)",
-        card: "0 2px 8px rgba(0, 26, 51, 0.06), 0 12px 28px -12px rgba(0, 26, 51, 0.18)",
+        soft: "0 10px 40px -10px rgba(0, 0, 92, 0.25)",
+        card: "0 2px 8px rgba(0, 0, 92, 0.06), 0 12px 28px -12px rgba(0, 0, 92, 0.18)",
       },
       animation: {
         "fade-up": "fadeUp 0.8s ease-out forwards",

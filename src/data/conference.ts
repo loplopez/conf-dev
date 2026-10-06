@@ -23,7 +23,8 @@ export const dates: DateItem[] = [
   { short: 'TBD',       label: 'Abstract notification',             date: 'TBD',              done: false },
   { short: 'FEB 28',    label: 'Early bird registration deadline',  date: '28 February 2027', done: false },
   { short: 'TBD',       label: 'Presenter deadline',                date: 'TBD',              done: false },
-  { short: 'MAY 17–21', label: 'NetSci 2027 Conference',            date: '17 — 21 May 2027', done: false, primary: true },
+  { short: 'MAY 17–18', label: 'Satellites & School (until 18 May midday)',           date: '17 — 18 May 2027', done: false, primary: true },
+  { short: 'MAY 18–21', label: 'Main conference (from 18 May midday)',                   date: '18 — 21 May 2027', done: false, primary: true },
 ];
 
 // ── At-a-glance stats ────────────────────────

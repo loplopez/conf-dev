@@ -23,10 +23,10 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
   <main class="font-['Rubik'] bg-white text-[#171717]">
     <!-- Announcement bar (2026: "The program is now available") -->
     <div class="pt-16">
-      <div class="bg-[#E8F1FB] border-b border-[#C9A24B]/40">
-        <p class="max-w-6xl mx-auto px-4 lg:px-8 py-3 text-center text-[15px] text-[#003063]">
-          Calls are open: <a href={u('/calls/satellites')} class="underline hover:text-[#C9A24B]">satellite proposals</a> due 15 November,
-          <a href={u('/calls/abstracts')} class="underline hover:text-[#C9A24B]">abstracts</a> due 15 December 2026.
+      <div class="bg-[#EEEEFF] border-b border-[#FFBE78]/40">
+        <p class="max-w-6xl mx-auto px-4 lg:px-8 py-3 text-center text-[15px] text-[#00008C]">
+          Calls are open: <a href={u('/calls/satellites')} class="underline hover:text-[#D1232A]">satellite proposals</a> due 15 November,
+          <a href={u('/calls/abstracts')} class="underline hover:text-[#D1232A]">abstracts</a> due 15 December 2026.
         </p>
       </div>
     </div>
@@ -40,13 +40,13 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     <section class="relative max-w-6xl mx-auto px-4 lg:px-8 py-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
       <div>
         <h2 class="text-4xl md:text-5xl font-light leading-tight">
-          <span class="text-[#003063]">Breaking</span> <span class="text-[#5B6B7F]">boundaries</span>
+          <span class="text-[#00008C]">Breaking</span> <span class="text-[#66668F]">boundaries</span>
         </h2>
       </div>
       <div class="space-y-5 text-[16px] leading-relaxed">
         <p>
           NetSci is the flagship conference of the
-          <a href="https://netscisociety.net" class="underline text-[#003063] hover:text-[#C9A24B]">Network Science Society</a>
+          <a href="https://netscisociety.net" class="underline text-[#00008C] hover:text-[#D1232A]">Network Science Society</a>
           and the premier venue for sharing and discussing discoveries, ideas, and emerging challenges in
           network science, from social and information networks to epidemics and public health, ecological
           and biological systems, the brain, infrastructure, and AI-driven systems.
@@ -58,7 +58,7 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
         </p>
         <p>
           NetSci 2027 is hosted by the Center Synergy of Systems
-          (<a href="https://tu-dresden.de/cids/departments/synosys" class="underline text-[#003063] hover:text-[#C9A24B]">SynoSys</a>)
+          (<a href="https://tu-dresden.de/cids/departments/synosys" class="underline text-[#00008C] hover:text-[#D1232A]">SynoSys</a>)
           at TU Dresden and takes place in Dresden, Germany, from 17 to 21 May 2027: satellites and the
           school on 17–18 May, followed by the main conference from 18 to 21 May.
         </p>
@@ -68,15 +68,15 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     <!-- Key dates (2026: vertical timeline) -->
     <section class="relative max-w-6xl mx-auto px-4 lg:px-8 pb-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
       <div>
-        <h2 class="text-4xl md:text-5xl font-light text-[#003063]">Key dates</h2>
-        <p class="mt-4 text-[#5B6B7F] max-w-xs">Please take note of key dates and deadlines for NetSci 2027.</p>
+        <h2 class="text-4xl md:text-5xl font-light text-[#00008C]">Key dates</h2>
+        <p class="mt-4 text-[#66668F] max-w-xs">Please take note of key dates and deadlines for NetSci 2027.</p>
       </div>
-      <ol class="relative border-l-2 border-[#003063] ml-28 space-y-7 py-2">
+      <ol class="relative border-l-2 border-[#00008C] ml-28 space-y-7 py-2">
         {dates.map((d) => (
           <li class="relative pl-6">
-            <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#003063]"></span>
-            <span class:list={['absolute -left-28 w-24 text-right text-sm tracking-wide', d.primary ? 'font-semibold text-[#003063]' : d.short === 'TBD' ? 'text-[#5B6B7F]' : 'text-[#C9A24B]']}>{d.short}</span>
-            <span class:list={[d.primary ? 'font-semibold text-[#171717]' : d.short === 'TBD' ? 'text-[#5B6B7F]' : 'text-[#171717]', d.done && 'line-through text-[#5B6B7F]']}>{d.label}</span>
+            <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#00008C]"></span>
+            <span class:list={['absolute -left-28 w-24 text-right text-sm tracking-wide', d.primary ? 'font-semibold text-[#00008C]' : d.short === 'TBD' ? 'text-[#66668F]' : 'text-[#D1232A]']}>{d.short}</span>
+            <span class:list={[d.primary ? 'font-semibold text-[#171717]' : d.short === 'TBD' ? 'text-[#66668F]' : 'text-[#171717]', d.done && 'line-through text-[#66668F]']}>{d.label}</span>
           </li>
         ))}
       </ol>
@@ -84,28 +84,28 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     </div>
 
     <!-- Speakers (2026: featured speaker) -->
-    <section class="bg-[#E8F1FB]">
+    <section class="bg-[#EEEEFF]">
       <div class="max-w-6xl mx-auto px-4 lg:px-8 py-16">
-        <h2 class="text-4xl md:text-5xl font-light text-[#003063]">Speakers</h2>
-        <h3 class="mt-8 text-xl font-light text-[#5B6B7F]">Keynotes</h3>
+        <h2 class="text-4xl md:text-5xl font-light text-[#00008C]">Speakers</h2>
+        <h3 class="mt-8 text-xl font-light text-[#66668F]">Keynotes</h3>
         <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {keynotes.map((s) => (
-            <li class="bg-white border-l-4 border-[#C9A24B] px-4 py-3">
-              <p class="text-[#0F4D92]">{s.data.name}</p>
-              <p class="text-sm text-[#5B6B7F]">{s.data.affiliation}</p>
+            <li class="bg-white border-l-4 border-[#FFBE78] px-4 py-3">
+              <p class="text-[#2F6DB5]">{s.data.name}</p>
+              <p class="text-sm text-[#66668F]">{s.data.affiliation}</p>
             </li>
           ))}
         </ul>
-        <h3 class="mt-8 text-xl font-light text-[#5B6B7F]">Breaking Boundaries</h3>
+        <h3 class="mt-8 text-xl font-light text-[#66668F]">Breaking Boundaries</h3>
         <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {bb.map((s) => (
-            <li class="bg-white border-l-4 border-[#C9A24B] px-4 py-3">
-              <p class="text-[#0F4D92]">{s.data.name}</p>
-              <p class="text-sm text-[#5B6B7F]">{s.data.affiliation}</p>
+            <li class="bg-white border-l-4 border-[#FFBE78] px-4 py-3">
+              <p class="text-[#2F6DB5]">{s.data.name}</p>
+              <p class="text-sm text-[#66668F]">{s.data.affiliation}</p>
             </li>
           ))}
         </ul>
-        <a href={u('/program/speakers')} class="inline-block mt-8 text-[#003063] underline hover:text-[#C9A24B]">All speakers →</a>
+        <a href={u('/program/speakers')} class="inline-block mt-8 text-[#00008C] underline hover:text-[#D1232A]">All speakers →</a>
       </div>
     </section>
   </main>

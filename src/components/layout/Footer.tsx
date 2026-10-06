@@ -7,7 +7,7 @@ import { socials } from '../../data/partners';
  */
 export default function Footer() {
   return (
-    <footer className="bg-tu-deep text-white font-['Rubik']">
+    <footer className="bg-[#00005C] text-white font-['Rubik']">
       <div className="max-w-6xl mx-auto px-4 lg:px-8 pt-10 pb-8">
         {/* Logos row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-white/10">

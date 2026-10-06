@@ -56,7 +56,7 @@ export default function Navbar() {
         <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
           <span className="flex flex-col items-center leading-none">
             <img src={u('/netsci-logo.svg')} alt="NetSci" className="h-8 w-auto" />
-            <span className="text-[13px] text-[#003063] mt-0.5">Dresden 2027</span>
+            <span className="text-[13px] text-[#00008C] mt-0.5">Dresden 2027</span>
           </span>
         </a>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
                   <>
                     <button
                       type="button"
-                      className="flex items-center gap-1 px-3 py-2.5 rounded hover:text-[#003063]"
+                      className="flex items-center gap-1 px-3 py-2.5 rounded hover:text-[#00008C]"
                       aria-expanded={open === item.key}
                       aria-haspopup="true"
                       onClick={() => setOpen((cur) => (cur === item.key ? null : item.key))}
@@ -90,7 +90,7 @@ export default function Navbar() {
                             <li key={child.key}>
                               <a
                                 href={href(child.href)}
-                                className="block px-4 py-2 text-sm hover:bg-[#E8F1FB] hover:text-[#003063] focus:bg-[#E8F1FB] focus:text-[#003063]"
+                                className="block px-4 py-2 text-sm hover:bg-[#EEEEFF] hover:text-[#00008C] focus:bg-[#EEEEFF] focus:text-[#00008C]"
                               >
                                 {t(child.key)}
                               </a>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     )}
                   </>
                 ) : (
-                  <a href={href(item.href!)} className="inline-flex px-3 py-2.5 rounded hover:text-[#003063]">
+                  <a href={href(item.href!)} className="inline-flex px-3 py-2.5 rounded hover:text-[#00008C]">
                     {t(item.key)}
                   </a>
                 )}
@@ -113,7 +113,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         {showMenu && (
           <button
-            className="lg:hidden p-2 rounded-md hover:bg-[#E8F1FB]"
+            className="lg:hidden p-2 rounded-md hover:bg-[#EEEEFF]"
             aria-label={t('nav.menu.open')}
             aria-expanded={mobileOpen}
             aria-controls="mobileMenu"
@@ -136,7 +136,7 @@ export default function Navbar() {
                   <>
                     <button
                       type="button"
-                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-md text-tu-deep hover:bg-[#E8F1FB]"
+                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-md text-tu-deep hover:bg-[#EEEEFF]"
                       aria-expanded={mobileSub === item.key}
                       onClick={() => setMobileSub((cur) => (cur === item.key ? null : item.key))}
                     >
@@ -144,10 +144,10 @@ export default function Navbar() {
                       <Chevron className={`w-4 h-4 ${mobileSub === item.key ? 'rotate-180' : ''}`} />
                     </button>
                     {mobileSub === item.key && (
-                      <ul className="ml-4 mb-2 border-l-2 border-[#E8F1FB] pl-3">
+                      <ul className="ml-4 mb-2 border-l-2 border-[#EEEEFF] pl-3">
                         {item.children.map((child) => (
                           <li key={child.key}>
-                            <a href={href(child.href)} className="block px-2 py-1.5 text-sm text-tu-ink/80 hover:text-[#003063]">
+                            <a href={href(child.href)} className="block px-2 py-1.5 text-sm text-tu-ink/80 hover:text-[#00008C]">
                               {t(child.key)}
                             </a>
                           </li>
@@ -156,7 +156,7 @@ export default function Navbar() {
                     )}
                   </>
                 ) : (
-                  <a href={href(item.href!)} className="block px-3 py-2.5 rounded-md text-tu-deep hover:bg-[#E8F1FB]">
+                  <a href={href(item.href!)} className="block px-3 py-2.5 rounded-md text-tu-deep hover:bg-[#EEEEFF]">
                     {t(item.key)}
                   </a>
                 )}
