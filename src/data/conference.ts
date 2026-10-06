@@ -13,13 +13,17 @@ export interface DateItem {
   primary?: boolean;
 }
 
-// Source: NetSci 2027 organising committee timeline + 6 Oct decisions.
+// Items mirror the netsci2026.com key-dates timeline; TBD where not decided yet.
+// Source for known dates: organising committee timeline + 6 Oct decisions.
 export const dates: DateItem[] = [
-  { short: 'NOV 15',    label: 'Satellite proposal deadline',      date: '15 November 2026', done: false, highlight: true },
-  { short: 'DEC 15',    label: 'Abstract submission deadline',     date: '15 December 2026', done: false },
-  { short: 'FEB 28',    label: 'Early bird registration deadline', date: '28 February 2027', done: false },
-  { short: 'MAY 17–18', label: 'Satellites & School',              date: '17 — 18 May 2027 (until midday)', done: false },
-  { short: 'MAY 18–21', label: 'NetSci 2027 Conference',           date: '18 — 21 May 2027', done: false, primary: true },
+  { short: 'TBD',       label: 'Registration and submissions open', date: 'TBD',              done: false },
+  { short: 'NOV 15',    label: 'Satellite submission deadline',     date: '15 November 2026', done: false, highlight: true },
+  { short: 'DEC 15',    label: 'Abstract submission deadline',      date: '15 December 2026', done: false },
+  { short: 'TBD',       label: 'Satellite notification',            date: 'TBD',              done: false },
+  { short: 'TBD',       label: 'Abstract notification',             date: 'TBD',              done: false },
+  { short: 'FEB 28',    label: 'Early bird registration deadline',  date: '28 February 2027', done: false },
+  { short: 'TBD',       label: 'Presenter deadline',                date: 'TBD',              done: false },
+  { short: 'MAY 17–21', label: 'NetSci 2027 Conference',            date: '17 — 21 May 2027', done: false, primary: true },
 ];
 
 // ── At-a-glance stats ────────────────────────

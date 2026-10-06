@@ -42,7 +42,7 @@ export const ui = {
     'about.body1.post':
       ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2027 edition, the conference comes to Dresden, hosted by the Center Synergy of Systems (SynoSys) at TU Dresden.',
     'about.body2':
-      'NetSci 2027 is about thinking beyond the current boundaries of network science: forward-looking ideas, new connections across disciplines, and young researchers at the centre of the program.',
+      'NetSci 2027 is about breaking the current boundaries of network science: forward-looking ideas, new connections across disciplines, and young researchers at the centre of the program.',
 
     'dates.label': 'Mark your calendar',
     'dates.heading': 'Important dates',

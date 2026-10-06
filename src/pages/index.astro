@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/layout/Navbar.tsx';
 import Footer from '../components/layout/Footer.tsx';
 import Hero from '../components/sections/Hero.tsx';
+import NetworkBackground from '../components/ui/NetworkBackground.astro';
 import heroPhoto from '../assets/dresden-silhouette.jpg';
 import { dates } from '../data/conference';
 
@@ -31,11 +32,14 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
 
     <Hero image={hero} />
 
+    <!-- White band with a decorative network behind "Breaking boundaries" and "Key dates" -->
+    <div class="relative overflow-hidden">
+      <NetworkBackground />
     <!-- About (2026: "20 years of NetSci") -->
-    <section class="max-w-6xl mx-auto px-4 lg:px-8 py-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
+    <section class="relative max-w-6xl mx-auto px-4 lg:px-8 py-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
       <div>
         <h2 class="text-4xl md:text-5xl font-light leading-tight">
-          <span class="text-[#003063]">Beyond</span> <span class="text-[#5B6B7F]">boundaries</span>
+          <span class="text-[#003063]">Breaking</span> <span class="text-[#5B6B7F]">boundaries</span>
         </h2>
         <img src="/netsci-logo.svg" alt="" class="mt-10 w-48 opacity-90" />
       </div>
@@ -48,7 +52,7 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
           and biological systems, the brain, infrastructure, and AI-driven systems.
         </p>
         <p>
-          NetSci 2027 asks what lies beyond the field's current boundaries. We invite work that is
+          NetSci 2027 is about breaking the current boundaries of network science. We invite work that is
           forward-looking and willing to take risks, that connects network science to new problems and
           disciplines, and we put young researchers at the centre of the program.
         </p>
@@ -62,7 +66,7 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     </section>
 
     <!-- Key dates (2026: vertical timeline) -->
-    <section class="max-w-6xl mx-auto px-4 lg:px-8 pb-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
+    <section class="relative max-w-6xl mx-auto px-4 lg:px-8 pb-20 grid md:grid-cols-[1fr_1.3fr] gap-12">
       <div>
         <h2 class="text-4xl md:text-5xl font-light text-[#003063]">Key dates</h2>
         <p class="mt-4 text-[#5B6B7F] max-w-xs">Please take note of key dates and deadlines for NetSci 2027.</p>
@@ -71,12 +75,13 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
         {dates.map((d) => (
           <li class="relative pl-6">
             <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#003063]"></span>
-            <span class:list={['absolute -left-28 w-24 text-right text-sm tracking-wide', d.primary ? 'font-semibold text-[#003063]' : 'text-[#C9A24B]']}>{d.short}</span>
-            <span class:list={[d.primary ? 'font-semibold text-[#171717]' : 'text-[#171717]', d.done && 'line-through text-[#5B6B7F]']}>{d.label}</span>
+            <span class:list={['absolute -left-28 w-24 text-right text-sm tracking-wide', d.primary ? 'font-semibold text-[#003063]' : d.short === 'TBD' ? 'text-[#5B6B7F]' : 'text-[#C9A24B]']}>{d.short}</span>
+            <span class:list={[d.primary ? 'font-semibold text-[#171717]' : d.short === 'TBD' ? 'text-[#5B6B7F]' : 'text-[#171717]', d.done && 'line-through text-[#5B6B7F]']}>{d.label}</span>
           </li>
         ))}
       </ol>
     </section>
+    </div>
 
     <!-- Speakers (2026: featured speaker) -->
     <section class="bg-[#E8F1FB]">
