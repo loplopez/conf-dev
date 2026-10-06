@@ -68,14 +68,6 @@ export default function Hero({ image }: Props) {
               {t('hero.dates')}
             </p>
 
-            {/* Non-clickable status pill — registration not yet open. */}
-            <div
-              className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white font-medium text-sm uppercase tracking-[0.15em]"
-              style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
-            >
-              <span className="w-2 h-2 rounded-full bg-tu-gold motion-safe:animate-pulse" />
-              {t('hero.cta')}
-            </div>
           </div>
         </div>
       </div>

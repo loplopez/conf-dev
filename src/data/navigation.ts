@@ -54,4 +54,5 @@ export const navItems: NavItem[] = [
     ],
   },
   { key: 'nav.partners', href: '/partners' },
+  { key: 'nav.contact', href: '/contact' },
 ];
