@@ -64,15 +64,58 @@ export const schedule: ScheduleDay[] = [
   },
 ];
 
-export interface CommitteeMember {
-  name: string;
+// Roles & responsibilities chart (Google doc "NetSci2027 Web content", Oct 2026).
+// Affiliations verified from institutional pages, Oct 2026. TODO: Kathrin Busch affiliation.
+export interface CommitteeGroup {
   role: string;
-  affiliation: string;
+  members: { name: string; affiliation: string }[];
 }
 
-export const committee: CommitteeMember[] = [
-  { name: 'Conference Chair', role: 'General Chair', affiliation: 'TU Dresden' },
-  { name: 'Program Chair', role: 'Program Committee', affiliation: 'TU Dresden' },
-  { name: 'Satellites Chair', role: 'Satellites', affiliation: 'Network Science Society' },
-  { name: 'Local Organisation', role: 'Local Chair', affiliation: 'TU Dresden' },
+const TUD = 'TU Dresden';
+
+export const committees: CommitteeGroup[] = [
+  { role: 'General Chairs', members: [
+    { name: 'Philipp Hövel', affiliation: 'Saarland University' },
+    { name: 'Thilo Gross', affiliation: 'HIFMB, University of Oldenburg' },
+  ]},
+  { role: 'Local Organizers', members: [
+    { name: 'Dirk Brockmann', affiliation: TUD },
+    { name: 'Philipp Lorenz-Spreen', affiliation: TUD },
+    { name: 'Thordis Kombrink', affiliation: TUD },
+    { name: 'Franziska Schäfer', affiliation: TUD },
+  ]},
+  { role: 'Program Chairs', members: [
+    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
+    { name: 'Nataša Djurdjevac Conrad', affiliation: 'Zuse Institute Berlin' },
+    { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
+    { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
+    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark' },
+  ]},
+  { role: 'Invited Speaker Chairs', members: [
+    { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
+    { name: 'Diego Rybski', affiliation: 'Leibniz Institute of Ecological Urban and Regional Development (IÖR)' },
+    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark' },
+    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
+  ]},
+  { role: 'Satellite Chairs', members: [
+    { name: 'Laura Alessandretti', affiliation: 'Technical University of Denmark' },
+    { name: 'Martin Hilbert', affiliation: 'University of California, Davis' },
+    { name: 'Carlos Aguilar-Trigueros', affiliation: 'University of Jyväskylä' },
+  ]},
+  { role: 'Poster Chairs', members: [
+    { name: 'Jana Diesner', affiliation: 'Technical University of Munich' },
+    { name: 'Marc Timme', affiliation: TUD },
+    { name: 'Diego Rybski', affiliation: 'Leibniz Institute of Ecological Urban and Regional Development (IÖR)' },
+  ]},
+  { role: 'School Chair', members: [
+    { name: 'Henrik Olsson', affiliation: 'Complexity Science Hub Vienna' },
+  ]},
+  { role: 'Young Researcher Chair', members: [
+    { name: 'Kathrin Busch', affiliation: '' },
+  ]},
+  { role: 'Web Chairs', members: [
+    { name: 'Bao Tran Truong', affiliation: TUD },
+    { name: 'Adrian Pelcaru', affiliation: TUD },
+    { name: 'Ezequiel Lopez-Lopez', affiliation: TUD },
+  ]},
 ];

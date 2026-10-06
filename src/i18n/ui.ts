@@ -22,7 +22,7 @@ export const ui = {
     'nav.registration': 'Registration',
     'nav.venue': 'Venue & Travel',
     'nav.venue.travel': 'Getting to Dresden',
-    'nav.venue.campus': 'TU Dresden Campus',
+    'nav.venue.campus': 'Venue',
     'nav.venue.hotels': 'Hotels & Accommodation',
     'nav.partners': 'Partners',
     'nav.practical': 'Practical Info',
@@ -41,9 +41,9 @@ export const ui = {
     'about.body1.pre': 'NetSci is the flagship gathering of the',
     'about.body1.link': 'Network Science Society',
     'about.body1.post':
-      ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2027 edition, the conference comes to Dresden, where TU Dresden welcomes the global community to its historic riverside campus.',
+      ', uniting researchers and practitioners who study complex systems through the lens of networks. For its 2027 edition, the conference comes to Dresden, hosted by the Center Synergy of Systems (SynoSys) at TU Dresden.',
     'about.body2':
-      'The program fosters interdisciplinary exchange across computer science, physics, mathematics, biology, neuroscience, and the social sciences — wherever networks help us understand the world.',
+      'NetSci 2027 is about thinking beyond the current boundaries of network science: forward-looking ideas, new connections across disciplines, and young researchers at the centre of the program.',
 
     'dates.label': 'Mark your calendar',
     'dates.heading': 'Important dates',

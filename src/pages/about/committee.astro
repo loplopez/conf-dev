@@ -1,26 +1,36 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { committee } from '../../data/program';
+import { committees } from '../../data/program';
 ---
 
 <PageLayout
   title="Organising Committee"
   eyebrow="About"
-  lede="NetSci 2027 is organised by TU Dresden in partnership with the Network Science Society."
+  lede="NetSci 2027 is organised by SynoSys at TU Dresden on behalf of the Network Science Society."
   crumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Committee' }]}
 >
-  <div class="grid sm:grid-cols-2 gap-5">
-    {committee.map((m) => (
-      <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-6">
-        <div class="text-xs uppercase tracking-[0.2em] text-tu-blue font-semibold">{m.role}</div>
-        <h2 class="mt-1 font-display text-xl font-bold text-tu-deep">{m.name}</h2>
-        <p class="text-sm text-tu-ink/70">{m.affiliation}</p>
-      </div>
+  <div class="space-y-12">
+    {committees.map((g) => (
+      <section>
+        <h2 class="font-display text-2xl font-bold text-tu-deep mb-5">{g.role}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {g.members.map((m) => (
+            <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-6 flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-tu-navy text-white font-display font-bold flex items-center justify-center shrink-0">
+                {m.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold text-tu-deep leading-tight">{m.name}</h3>
+                {m.affiliation && <p class="text-sm text-tu-ink/70">{m.affiliation}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     ))}
   </div>
-  <p class="mt-8 text-sm text-tu-ink/60 max-w-2xl">
-    Full committee membership, including the program and senior program committees, will be
-    published ahead of the conference. For organisational enquiries contact
+  <p class="mt-12 text-sm text-tu-ink/60 max-w-2xl">
+    For organisational enquiries contact
     <a href="mailto:netsci@tu-dresden.de" class="text-tu-navy underline decoration-tu-gold underline-offset-2">netsci@tu-dresden.de</a>.
   </p>
 </PageLayout>

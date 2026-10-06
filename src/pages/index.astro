@@ -7,9 +7,9 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/layout/Navbar.tsx';
 import Footer from '../components/layout/Footer.tsx';
 import Hero from '../components/sections/Hero.tsx';
-import videoThumb from '../assets/video-thumbnail.jpg';
+import heroPhoto from '../assets/dresden-silhouette.jpg';
 
-const heroImg = await getImage({ src: videoThumb, widths: [640, 1024, 1536, 1920], format: 'avif' });
+const heroImg = await getImage({ src: heroPhoto, widths: [640, 1024, 1536, 1920], format: 'avif' });
 const hero = { src: heroImg.src, srcSet: heroImg.srcSet.attribute };
 ---
 

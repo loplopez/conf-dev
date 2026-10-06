@@ -17,27 +17,22 @@ export default function Hero({ image }: Props) {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="relative h-screen w-full">
-        {/* Background hyperlapse video (Dresden silhouette by twosyde media GmbH).
-            The optimized image is the poster (shown while the video buffers and on
-            devices that cannot play the source). */}
-        <video
+        {/* Background photo: Dresden silhouette (DMG / Sylvio Dittrich, Dresden Media Licence DML-BY). */}
+        <img
+          src={image.src}
+          srcSet={image.srcSet}
+          sizes="100vw"
+          alt="Dresden skyline with Frauenkirche and Hofkirche over the Elbe"
           className="absolute inset-0 h-full w-full object-cover object-center"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={image.src}
-        >
-          <source src="/dresden-hyperlapse.mp4" type="video/mp4" />
-        </video>
+          fetchPriority="high"
+        />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/45" />
 
-        {/* Video credit */}
-        <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/60 z-10">
-          Video · twosyde media GmbH
+        {/* Photo credit (required by DML-BY licence) */}
+        <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/70 z-10">
+          Photo · DMG / Sylvio Dittrich (DML-BY)
         </div>
 
         {/* Content */}

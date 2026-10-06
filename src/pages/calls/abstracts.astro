@@ -3,9 +3,25 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import Prose from '../../components/ui/Prose.tsx';
 import { contributions } from '../../data/conference';
 
-// Structure mirrors netsci2026.com/call-for-abstracts.
-// TODO(chairs): conference topics list, abstract rules (one per presenter? in-person only?),
-// and review criteria are not confirmed for 2027 — add once the program chairs approve.
+// Structure, topics and rules adopted from netsci2026.com/call-for-abstracts (decided 6 Oct 2026);
+// lightning talks dropped for 2027; generative-AI policy added.
+const topics = [
+  'Network models and inference',
+  'Statistical physics of networks',
+  'Temporal, multilayer, and adaptive networks',
+  'Higher-order and hypergraph structures',
+  'Network geometry and topology',
+  'Dynamics on and of networks (spreading, synchronization, control)',
+  'Network resilience and percolation',
+  'Graph machine learning and data-driven methods',
+  'Network visualization and measurement',
+  'Biological, ecological, and brain networks',
+  'Social, cultural, and linguistic networks',
+  'Mobility, infrastructure, and urban systems',
+  'Financial and economic networks',
+  'Network medicine and health',
+  'Ethics, fairness, and education in network science',
+];
 const SUBMIT_URL = 'https://netsci2027.eventclass.it/';
 const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstract-template/gqryjjnvrczn';
 ---
@@ -20,9 +36,28 @@ const TEMPLATE_URL = 'https://www.overleaf.com/latex/templates/netsci2027-abstra
     <Prose>
       <h2>Submissions</h2>
       <p>
-        We invite one-page abstracts across all areas of network science. Abstracts are reviewed by
-        the Program Committee and accepted as a contributed talk or a poster.
+        We invite one-page abstracts across all areas of network science, and especially work that
+        pushes beyond the field's current boundaries. Each abstract includes one mandatory descriptive
+        figure (with caption) and references. Abstracts are reviewed by the Program Committee and
+        accepted as a contributed talk or a poster. Authors may indicate a preferred format; the
+        Program Committee makes the final decision.
       </p>
+
+      <h2>Abstract requirements</h2>
+      <ul>
+        <li>Abstracts must be no longer than one page, including text, figure, and references.</li>
+        <li>Submissions must be in PDF format, prepared with the official LaTeX template.</li>
+        <li>The language of submission and presentation is English.</li>
+        <li>Each accepted abstract must be presented in person by one of its authors.</li>
+        <li>Each author may present only one abstract at the main conference.</li>
+        <li>Presenting authors must register by the presenter deadline to appear in the final program.</li>
+      </ul>
+
+      <h2>Conference topics</h2>
+      <p>Topics include, but are not limited to:</p>
+      <ul>
+        {topics.map((t) => <li>{t}</li>)}
+      </ul>
 
       <h2>Presentation formats</h2>
       <ul>

@@ -69,6 +69,6 @@ export interface TravelItem {
 
 export const travelItems: TravelItem[] = [
   { label: 'Direct flights', val: 'via DRS, BER, PRG and LEJ airports' },
-  { label: 'On campus',      val: 'Hörsaalzentrum & SLUB host main sessions' },
+  { label: 'Venue',          val: 'To-be-revealed location in Dresden' },
   { label: 'Getting around', val: 'Trams 3, 8, 11 stop at the venue' },
 ];
