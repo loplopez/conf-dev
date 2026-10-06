@@ -2,7 +2,7 @@
 /**
  * NetworkBackground — decorative network drawn behind white sections.
  * A seeded random geometric graph (same picture on every build): nodes connect to
- * neighbours within a radius; a few hubs in gold. Purely decorative (aria-hidden).
+ * neighbours within a radius; a hubs and nodes in NetSci red. Purely decorative (aria-hidden).
  */
 interface Props {
   seed?: number;
@@ -51,9 +51,9 @@ const hubCut = [...degree].sort((a, b) => b - a)[Math.floor(nodes * 0.06)];
   </g>
   <g>
     {pts.map((p, i) => degree[i] >= hubCut ? (
-      <circle cx={p.x} cy={p.y} r={5} fill="#C9A24B" fill-opacity="0.55" />
+      <circle cx={p.x} cy={p.y} r={5.5} fill="#D1232A" fill-opacity="0.6" />
     ) : (
-      <circle cx={p.x} cy={p.y} r={1.6 + Math.min(degree[i], 8) * 0.35} fill="#003063" fill-opacity="0.18" />
+      <circle cx={p.x} cy={p.y} r={1.8 + Math.min(degree[i], 8) * 0.4} fill="#D1232A" fill-opacity="0.28" />
     ))}
   </g>
 </svg>
