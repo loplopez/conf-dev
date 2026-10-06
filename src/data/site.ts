@@ -1,12 +1,13 @@
 // ─────────────────────────────────────────────
-//  Site-wide flags.
-//  landingOnly: when true, the navbar shows only the logo + a single CTA
-//  and the footer hides its deep links — matching the "landing page only"
-//  brief. The sub-pages still exist in the repo and remain reachable by URL.
-//  Set this to `false` after the kickoff meeting to switch on the full nav.
+//  Site-wide switches, set at build time.
+//  Public site (netsci2027.github.io):  landing page only, menu hidden.
+//  Dev preview  (netsci2027.github.io/dev, built with PUBLIC_FULL_SITE=1): full site + menu.
+//  To launch the full public site, build main with PUBLIC_FULL_SITE=1 as well.
 // ─────────────────────────────────────────────
-export const landingOnly = true;
+const full = import.meta.env.PUBLIC_FULL_SITE === '1';
 
-// When false, the top navbar menu (and mobile hamburger) is hidden — only the
-// NetSci logo shows. Use this while content for the deeper pages is not ready.
-export const showMenu = false;
+/** true → only Home/Registration navigate; other links are inert. */
+export const landingOnly = !full;
+
+/** false → top menu and mobile hamburger are hidden (logo only). */
+export const showMenu = full;

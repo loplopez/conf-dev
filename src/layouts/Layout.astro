@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url';
 import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -82,7 +83,7 @@ const eventSchema = {
     <meta name="twitter:image"       content={image} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
     <meta name="theme-color" content="#001A33" />
 
     <!-- Structured data for rich conference results -->

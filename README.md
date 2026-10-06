@@ -73,12 +73,25 @@ src/
 | Hero / Dresden photo | replace `src/assets/tu-dresden.jpeg` |
 | Site URL (sitemap, canonical, schema) | `astro.config.mjs` → `site` |
 
-### Turn the full site on (after content is approved)
-Open `src/data/site.ts` and flip one flag:
+### Public site vs. dev preview
 
-```ts
-export const landingOnly = true;   // false → every nav item links to its real page
+The same code builds two sites (see `.github/workflows/deploy.yml`):
+
+| Repo | URL | What it shows |
+|---|---|---|
+| `netsci2027/netsci2027.github.io` | https://netsci2027.github.io | Public site: landing page only, menu hidden |
+| `netsci2027/dev` | https://netsci2027.github.io/dev | Dev preview: full site with menu, for sharing with the team |
+
+The workflow picks `BASE_PATH` (`/` or `/dev`) and `PUBLIC_FULL_SITE` (`0` or `1`) from the repository name.
+Locally, `npm run dev` always shows the full site (`.env.development`).
+
+Publish the dev preview:
+
+```bash
+git remote add dev https://github.com/netsci2027/dev.git   # once
+git push dev main                                           # every time you want to update it
 ```
 
-When `false`, all the already-built pages (About, Program, Venue, etc.) become reachable
-from the menu.
+Internal links and `/public` assets must use `u('/path')` from `src/lib/url.ts` so they work under `/dev`.
+
+To launch the full public site, set `PUBLIC_FULL_SITE` to `'1'` for the main repo in the workflow.

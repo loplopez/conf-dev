@@ -30,8 +30,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Same code, two sites:
+      #   netsci2027/netsci2027.github.io → public site at "/" (landing only)
+      #   netsci2027/dev                  → dev preview at "/dev" (full site + menu)
       - name: Build
         run: npm run build
+        env:
+          BASE_PATH: ${{ github.repository == 'netsci2027/dev' && '/dev' || '/' }}
+          PUBLIC_FULL_SITE: ${{ github.repository == 'netsci2027/dev' && '1' || '0' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

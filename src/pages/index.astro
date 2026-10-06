@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib/url';
 // Home — section order follows netsci2026.com: announcement bar, hero, about, key dates, speakers, footer.
 import { getImage } from 'astro:assets';
 import { getCollection } from 'astro:content';
@@ -24,8 +25,8 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     <div class="pt-16">
       <div class="bg-[#E8F1FB] border-b border-[#C9A24B]/40">
         <p class="max-w-6xl mx-auto px-4 lg:px-8 py-3 text-center text-[15px] text-[#003063]">
-          Calls are open: <a href="/calls/satellites" class="underline hover:text-[#C9A24B]">satellite proposals</a> due 15 November,
-          <a href="/calls/abstracts" class="underline hover:text-[#C9A24B]">abstracts</a> due 15 December 2026.
+          Calls are open: <a href={u('/calls/satellites')} class="underline hover:text-[#C9A24B]">satellite proposals</a> due 15 November,
+          <a href={u('/calls/abstracts')} class="underline hover:text-[#C9A24B]">abstracts</a> due 15 December 2026.
         </p>
       </div>
     </div>
@@ -41,7 +42,7 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
         <h2 class="text-4xl md:text-5xl font-light leading-tight">
           <span class="text-[#003063]">Breaking</span> <span class="text-[#5B6B7F]">boundaries</span>
         </h2>
-        <img src="/netsci-logo.svg" alt="" class="mt-10 w-48 opacity-90" />
+        <img src={u('/netsci-logo.svg')} alt="" class="mt-10 w-48 opacity-90" />
       </div>
       <div class="space-y-5 text-[16px] leading-relaxed">
         <p>
@@ -105,7 +106,7 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
             </li>
           ))}
         </ul>
-        <a href="/program/speakers" class="inline-block mt-8 text-[#003063] underline hover:text-[#C9A24B]">All speakers →</a>
+        <a href={u('/program/speakers')} class="inline-block mt-8 text-[#003063] underline hover:text-[#C9A24B]">All speakers →</a>
       </div>
     </section>
   </main>

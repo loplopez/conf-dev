@@ -1,4 +1,5 @@
 ---
+import { u } from '../../lib/url';
 import PageLayout from '../../layouts/PageLayout.astro';
 import Prose from '../../components/ui/Prose.tsx';
 ---
@@ -43,8 +44,8 @@ import Prose from '../../components/ui/Prose.tsx';
     </ul>
     <h2>Learn more</h2>
     <ul>
-      <li><a href="/about/committee">Organising Committee</a></li>
-      <li><a href="/about/awards">Conference Awards</a></li>
+      <li><a href={u('/about/committee')}>Organising Committee</a></li>
+      <li><a href={u('/about/awards')}>Conference Awards</a></li>
     </ul>
   </Prose>
 </PageLayout>

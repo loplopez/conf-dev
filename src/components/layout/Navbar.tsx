@@ -1,3 +1,4 @@
+import { u } from '../../lib/url';
 import { useEffect, useRef, useState } from 'react';
 import { navItems } from '../../data/navigation';
 import { useTranslations } from '../../i18n/utils';
@@ -7,7 +8,7 @@ const t = useTranslations();
 
 // Landing-only mode: only these paths navigate; everything else is a dead link.
 const livePaths = new Set(['/', '/registration']);
-const href = (path: string) => (landingOnly && !livePaths.has(path) ? '#' : path);
+const href = (path: string) => (landingOnly && !livePaths.has(path) ? '#' : u(path));
 
 const Chevron = ({ className = 'w-3 h-3' }: { className?: string }) => (
   <svg className={`${className} opacity-60 transition-transform`} viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
@@ -54,7 +55,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href={href('/')} className="flex items-center gap-2 shrink-0" aria-label={t('nav.home')}>
           <span className="flex flex-col items-center leading-none">
-            <img src="/netsci-logo.svg" alt="NetSci" className="h-8 w-auto" />
+            <img src={u('/netsci-logo.svg')} alt="NetSci" className="h-8 w-auto" />
             <span className="text-[13px] text-[#003063] mt-0.5">Dresden 2027</span>
           </span>
         </a>

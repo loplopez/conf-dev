@@ -1,3 +1,4 @@
+import { u } from '../../lib/url';
 /**
  * PageHero — inner-page title block, styled after netsci2026.com:
  * white background, light-weight NetSci-red title, plain lede. Eyebrow kept as an optional small label.
@@ -25,7 +26,7 @@ export default function PageHero({ title, lede, crumbs = [] }: Props) {
               {crumbs.map((c, i) => (
                 <li key={i} className="flex items-center gap-2">
                   {c.href ? (
-                    <a href={c.href} className="hover:text-[#003063] transition-colors">{c.label}</a>
+                    <a href={u(c.href)} className="hover:text-[#003063] transition-colors">{c.label}</a>
                   ) : (
                     <span className="text-[#242A2F]">{c.label}</span>
                   )}

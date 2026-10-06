@@ -1,3 +1,4 @@
+import { u } from '../../lib/url';
 import { socials } from '../../data/partners';
 
 /**
@@ -10,12 +11,12 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 lg:px-8 pt-10 pb-8">
         {/* Logos row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-white/10">
-          <a href="/" aria-label="NetSci 2027 home" className="bg-white rounded-md px-3 py-2 inline-flex">
-            <img src="/netsci-logo.svg" alt="NetSci" className="h-8 w-auto" />
+          <a href={u('/')} aria-label="NetSci 2027 home" className="bg-white rounded-md px-3 py-2 inline-flex">
+            <img src={u('/netsci-logo.svg')} alt="NetSci" className="h-8 w-auto" />
           </a>
           <div className="flex items-center gap-10">
-            <img src="/tu-dresden-logo.png" alt="TU Dresden" className="h-11 w-auto brightness-0 invert opacity-85" />
-            <img src="/synosys-logo.png" alt="SynoSys" className="h-11 w-auto brightness-0 invert opacity-85" />
+            <img src={u('/tu-dresden-logo.png')} alt="TU Dresden" className="h-11 w-auto brightness-0 invert opacity-85" />
+            <img src={u('/synosys-logo.png')} alt="SynoSys" className="h-11 w-auto brightness-0 invert opacity-85" />
           </div>
         </div>
 
