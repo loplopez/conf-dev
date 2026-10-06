@@ -19,10 +19,10 @@ window.addEventListener('pointermove', (e) => { mouse.x = e.clientX; mouse.y = e
 window.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
 
 function makeCluster(w: number, h: number): Cluster {
-  const n = 10 + Math.floor(Math.random() * 15);
+  const n = 22 + Math.floor(Math.random() * 20);
   const nodes: Node[] = Array.from({ length: n }, (_, i) => {
     const a = Math.random() * Math.PI * 2;
-    const d = i === 0 ? 0 : 25 + Math.sqrt(Math.random()) * 120;
+    const d = i === 0 ? 0 : 30 + Math.sqrt(Math.random()) * 230;
     return { ox: Math.cos(a) * d, oy: Math.sin(a) * d, phase: Math.random() * Math.PI * 2, dx: 0, dy: 0, r: i === 0 ? 4 : 1.8 + Math.random() * 1.6, hub: i === 0 };
   });
   // geometric graph inside the cluster: link each node to its 2 nearest neighbours
@@ -47,8 +47,8 @@ function makeCluster(w: number, h: number): Cluster {
 function animate(canvas: HTMLCanvasElement) {
   const dark = canvas.dataset.network === 'dark';
   const LINK = dark ? '255, 255, 255' : '0, 48, 99';
-  const linkA = dark ? 0.2 : 0.1;
-  const nodeA = dark ? 0.45 : 0.25;
+  const linkA = dark ? 0.12 : 0.06;
+  const nodeA = dark ? 0.3 : 0.15;
   const ctx = canvas.getContext('2d')!;
   let w = 0, h = 0, clusters: Cluster[] = [], raf = 0, t = 0, visible = true;
 
@@ -58,7 +58,7 @@ function animate(canvas: HTMLCanvasElement) {
     if (!w || !h) return;
     canvas.width = w * dpr; canvas.height = h * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.round(Math.min(12, Math.max(4, (w * h) / 150000)));
+    const count = Math.round(Math.min(8, Math.max(3, (w * h) / 300000)));
     clusters = Array.from({ length: count }, () => makeCluster(w, h));
   }
 
@@ -72,8 +72,8 @@ function animate(canvas: HTMLCanvasElement) {
     for (const c of clusters) {
       if (!reduce) {
         c.x += c.vx; c.y += c.vy;
-        if (c.x < -180) c.x = w + 180; if (c.x > w + 180) c.x = -180;
-        if (c.y < -180) c.y = h + 180; if (c.y > h + 180) c.y = -180;
+        if (c.x < -300) c.x = w + 300; if (c.x > w + 300) c.x = -300;
+        if (c.y < -300) c.y = h + 300; if (c.y > h + 300) c.y = -300;
       }
       const ps = c.nodes.map((n) => {
         const wob = reduce ? 0 : 2.2;
@@ -100,8 +100,8 @@ function animate(canvas: HTMLCanvasElement) {
     ctx.lineWidth = 0.6;
     for (let i = 0; i < clusters.length; i++) for (let j = i + 1; j < clusters.length; j++) {
       const a = pos[i][0], b = pos[j][0], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 260) {
-        ctx.strokeStyle = `rgba(${LINK}, ${(linkA * 0.45 * (1 - d / 260)).toFixed(3)})`;
+      if (d < 420) {
+        ctx.strokeStyle = `rgba(${LINK}, ${(linkA * 0.45 * (1 - d / 420)).toFixed(3)})`;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
       }
     }
