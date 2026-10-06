@@ -37,7 +37,16 @@ export default function Footer({ minimal = false }: Props) {
         </div>
       </div>
 
-      {minimal && null}
+      {minimal && (
+        <div className="border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8 py-4 flex flex-wrap items-center justify-center gap-5 text-xs text-white/50">
+            <a href="mailto:netsci@tu-dresden.de" className="hover:text-tu-gold transition-colors">netsci@tu-dresden.de</a>
+            <a href="https://synosys.github.io/imprint/" className="hover:text-tu-gold transition-colors">Imprint</a>
+            <a href="https://synosys.github.io/data-protection" className="hover:text-tu-gold transition-colors">Privacy</a>
+            <a href="https://synosys.github.io/accessibility" className="hover:text-tu-gold transition-colors">Accessibility</a>
+          </div>
+        </div>
+      )}
 
       {!minimal && (
       <>
@@ -98,8 +107,9 @@ export default function Footer({ minimal = false }: Props) {
         <div>
           <div className="text-xs uppercase tracking-[0.2em] text-tu-gold font-semibold mb-4">{t('footer.col.contact')}</div>
           <ul className="space-y-2.5 text-sm text-white/75">
-            <li>chair@netsci-dresden.de</li>
-            <li>support@netsci-dresden.de</li>
+            <li><a href="mailto:netsci@tu-dresden.de" className="hover:text-tu-gold">netsci@tu-dresden.de</a></li>
+            <li><a href="mailto:program.netsci@tu-dresden.de" className="hover:text-tu-gold">program.netsci@tu-dresden.de</a></li>
+            <li><a href="mailto:satellites.netsci@tu-dresden.de" className="hover:text-tu-gold">satellites.netsci@tu-dresden.de</a></li>
             <li className="text-white/50 pt-1 text-xs">TU Dresden, 01062 Dresden</li>
           </ul>
         </div>
@@ -110,9 +120,9 @@ export default function Footer({ minimal = false }: Props) {
         <div className="max-w-6xl mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
           <div>{t('footer.rights')}</div>
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-tu-gold transition-colors">Privacy</a>
-            <a href="#" className="hover:text-tu-gold transition-colors">Imprint</a>
-            <a href="#" className="hover:text-tu-gold transition-colors">Accessibility</a>
+            <a href="https://synosys.github.io/data-protection" className="hover:text-tu-gold transition-colors">Privacy</a>
+            <a href="https://synosys.github.io/imprint/" className="hover:text-tu-gold transition-colors">Imprint</a>
+            <a href="https://synosys.github.io/accessibility" className="hover:text-tu-gold transition-colors">Accessibility</a>
           </div>
         </div>
       </div>

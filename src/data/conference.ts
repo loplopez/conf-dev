@@ -19,7 +19,8 @@ export const dates: DateItem[] = [
   { label: 'Satellite notification',               date: '15 December 2026', done: false },
   { label: 'Abstract notification',                date: '15 January 2027',  done: false },
   { label: 'Early bird registration deadline',     date: '28 February 2027', done: false },
-  { label: 'Conference opens',                     date: '18 May 2027',      done: false, primary: true },
+  { label: 'Satellites & School',                  date: '17 — 18 May 2027 (until midday)', done: false },
+  { label: 'Main conference',                      date: '18 — 21 May 2027', done: false, primary: true },
 ];
 
 // ── At-a-glance stats ────────────────────────
@@ -47,12 +48,6 @@ export interface Contribution {
 }
 
 export const contributions: Contribution[] = [
-  {
-    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
-    title: 'Lightning talks',
-    spec: '3 minutes · 3 slides',
-    desc: 'Fast-paced presentations to share early-stage ideas or work-in-progress with the community.',
-  },
   {
     icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M19.5 12c0 4.142-3.358 7.5-7.5 7.5S4.5 16.142 4.5 12 7.858 4.5 12 4.5s7.5 3.358 7.5 7.5z',
     title: 'Contributed talks',

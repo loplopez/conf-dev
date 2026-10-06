@@ -31,7 +31,7 @@ export const ui = {
 
     // Use `|` to mark line breaks (the Hero renders one <br/> per pipe).
     'hero.title': 'International School & Conference|on Network Science',
-    'hero.dates': 'From May 18, 2027 · Dresden, Germany',
+    'hero.dates': 'May 17 — 21, 2027 · Dresden, Germany',
     'hero.cta': 'More Information soon',
     'hero.eventLabel': 'NetSci 2027',
 
@@ -50,7 +50,7 @@ export const ui = {
 
     'contrib.label': 'For Authors',
     'contrib.heading': 'Preparing your contribution',
-    'contrib.sub': 'Format guidelines for the three presentation tracks at NetSci Dresden 2027.',
+    'contrib.sub': 'Format guidelines for the two presentation tracks at NetSci Dresden 2027.',
     'contrib.print.label': 'Local printing',
     'contrib.print.heading': 'Need to print on-site?',
     'contrib.print.body':
@@ -66,7 +66,7 @@ export const ui = {
 
     'footer.partners': 'Hosted by · In partnership with',
     'footer.tagline':
-      'The International School and Conference on Network Science, hosted at TU Dresden from 18 May 2027.',
+      'The International School and Conference on Network Science, hosted at TU Dresden, 17 — 21 May 2027.',
     'footer.follow': 'Follow',
     'footer.col.conference': 'Conference',
     'footer.col.practical': 'Practical',

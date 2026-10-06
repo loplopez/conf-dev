@@ -1,7 +1,7 @@
 import { cn } from '../../lib/cn';
 
 // Fee tiers mirror the NetSci conference-series structure, localized to
-// Dresden 2027 (conference opens 18 May 2027).
+// Dresden 2027 (17 — 21 May 2027).
 const earlyDeadline = '5 February 2027';
 const onlineDeadline = '6 May 2027';
 
@@ -53,7 +53,7 @@ export default function Registration() {
           <p className="mt-1 font-display text-2xl font-bold">Register by {earlyDeadline} for the best rate</p>
         </div>
         <a
-          href="mailto:register@netsci-dresden.de?subject=NetSci%20Dresden%202027%20Registration"
+          href="mailto:netsci@tu-dresden.de?subject=NetSci%20Dresden%202027%20Registration"
           className="shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-tu-sky text-white font-semibold hover:bg-tu-blue active:scale-95 transition-all"
         >
           Register now
@@ -163,7 +163,7 @@ export default function Registration() {
       <div data-reveal className="bg-tu-cream border border-tu-navy/10 rounded-2xl p-7 text-center">
         <h2 className="font-display text-xl font-bold text-tu-deep">Questions about registration?</h2>
         <p className="mt-2 text-sm text-tu-ink/70">
-          Email <a href="mailto:register@netsci-dresden.de" className="text-tu-navy underline decoration-tu-gold underline-offset-2">register@netsci-dresden.de</a> and we will help you out.
+          Email <a href="mailto:netsci@tu-dresden.de" className="text-tu-navy underline decoration-tu-gold underline-offset-2">netsci@tu-dresden.de</a> and we will help you out.
         </p>
       </div>
     </>
