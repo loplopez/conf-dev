@@ -16,8 +16,9 @@ interface Props {
 
 export default function PageHero({ title, lede, crumbs = [] }: Props) {
   return (
-    <section className="bg-white">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 pt-28 pb-6">
+    <section className="relative bg-white overflow-hidden">
+      <canvas data-network="light" className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" />
+      <div className="relative max-w-6xl mx-auto px-4 lg:px-8 pt-28 pb-10">
         {crumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-4">
             <ol className="flex flex-wrap items-center gap-2 text-xs text-[#7C7C7C]">
