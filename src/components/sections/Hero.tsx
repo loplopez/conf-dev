@@ -30,6 +30,9 @@ export default function Hero({ image }: Props) {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/45" />
 
+        {/* Animated network (drawn by a script in pages/index.astro; static for reduced motion) */}
+        <canvas id="hero-network" className="absolute inset-0 h-full w-full pointer-events-none" aria-hidden="true" />
+
         {/* Photo credit (required by DML-BY licence) */}
         <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] text-white/70 z-10">
           Photo · DMG / Sylvio Dittrich (DML-BY)
