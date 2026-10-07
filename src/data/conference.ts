@@ -18,7 +18,7 @@ export interface DateItem {
 export const dates: DateItem[] = [
   { short: 'TBD',       label: 'Registration and submissions open', date: 'TBD',              done: false },
   { short: 'NOV 15',    label: 'Satellite submission deadline',     date: '15 November 2026', done: false, highlight: true },
-  { short: 'DEC 15',    label: 'Abstract submission deadline',      date: '15 December 2026', done: false },
+  { short: 'DEC 1',     label: 'Abstract submission deadline',      date: '1 December 2026', done: false },
   { short: 'TBD',       label: 'Satellite notification',            date: 'TBD',              done: false },
   { short: 'TBD',       label: 'Abstract notification',             date: 'TBD',              done: false },
   { short: 'FEB 28',    label: 'Early bird registration deadline',  date: '28 February 2027', done: false },
