@@ -87,18 +87,18 @@ const bb = speakers.filter((s) => s.data.category === 'Breaking Boundaries');
     <section class="bg-[#EEEEFF]">
       <div class="max-w-6xl mx-auto px-4 lg:px-8 py-16">
         <h2 class="text-4xl md:text-5xl font-light text-[#00008C]">Speakers</h2>
-        <h3 class="mt-8 text-xl font-light text-[#66668F]">Keynotes</h3>
-        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {keynotes.map((s) => (
+        <h3 class="mt-8 text-xl font-light text-[#66668F]">Breaking Boundaries</h3>
+        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {bb.map((s) => (
             <li class="bg-white border-l-4 border-[#FFBE78] px-4 py-3">
               <p class="text-[#2F6DB5]">{s.data.name}</p>
               <p class="text-sm text-[#66668F]">{s.data.affiliation}</p>
             </li>
           ))}
         </ul>
-        <h3 class="mt-8 text-xl font-light text-[#66668F]">Breaking Boundaries</h3>
-        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {bb.map((s) => (
+        <h3 class="mt-8 text-xl font-light text-[#66668F]">Keynotes</h3>
+        <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {keynotes.map((s) => (
             <li class="bg-white border-l-4 border-[#FFBE78] px-4 py-3">
               <p class="text-[#2F6DB5]">{s.data.name}</p>
               <p class="text-sm text-[#66668F]">{s.data.affiliation}</p>

@@ -5,13 +5,14 @@ import { u } from '../../lib/url';
 
 const all = (await getCollection('speakers')).sort((a, b) => a.data.order - b.data.order);
 const groups = [
-  {
-    title: 'Keynote Speakers',
-    speakers: all.filter((s) => s.data.category === 'Keynote'),
-  },
+  // Breaking Boundaries first (8 Oct 2026).
   {
     title: 'Breaking Boundaries',
     speakers: all.filter((s) => s.data.category === 'Breaking Boundaries'),
+  },
+  {
+    title: 'Keynote Speakers',
+    speakers: all.filter((s) => s.data.category === 'Keynote'),
   },
 ].filter((g) => g.speakers.length > 0);
 ---
@@ -19,7 +20,7 @@ const groups = [
 <PageLayout
   title="Speakers"
   eyebrow="Program"
-  lede="Keynote and Breaking Boundaries speakers at NetSci 2027. More speakers will be announced soon."
+  lede="Breaking Boundaries and keynote speakers at NetSci 2027. More speakers will be announced soon."
   crumbs={[
     { label: 'Home', href: '/' },
     { label: 'Program' },
