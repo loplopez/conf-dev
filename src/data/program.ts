@@ -78,10 +78,10 @@ export const committees: CommitteeGroup[] = [
   // then program, poster and satellite chairs.
   { role: 'General Chairs & Local Organizers', members: [
     { name: 'Dirk Brockmann', affiliation: TUD, photo: '/people/dirk-brockmann.jpg' },
-    { name: 'Franziska Derkum', affiliation: TUD },
+    { name: 'Franziska Derkum', affiliation: TUD, photo: '/people/franziska-derkum.jpg' },
     { name: 'Philipp Hövel', affiliation: 'Saarland University' },
-    { name: 'Thordis Kombrink', affiliation: TUD },
-    { name: 'Philipp Lorenz-Spreen', affiliation: TUD },
+    { name: 'Thordis Kombrink', affiliation: TUD, photo: '/people/thordis-kombrink.jpg' },
+    { name: 'Philipp Lorenz-Spreen', affiliation: TUD, photo: '/people/philipp-lorenz-spreen.jpg' },
   ]},
   { role: 'Program Chairs', members: [
     { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
@@ -116,15 +116,15 @@ export const committees: CommitteeGroup[] = [
     { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
   ]},
   { role: 'Sponsor Chair', members: [
-    { name: 'Franziska Derkum', affiliation: TUD },
+    { name: 'Franziska Derkum', affiliation: TUD, photo: '/people/franziska-derkum.jpg' },
   ]},
   { role: 'Childcare Chairs', members: [
-    { name: 'Thordis Kombrink', affiliation: TUD },
-    { name: 'Philipp Lorenz-Spreen', affiliation: TUD },
+    { name: 'Thordis Kombrink', affiliation: TUD, photo: '/people/thordis-kombrink.jpg' },
+    { name: 'Philipp Lorenz-Spreen', affiliation: TUD, photo: '/people/philipp-lorenz-spreen.jpg' },
   ]},
   { role: 'Web Chairs', members: [
-    { name: 'Bao Tran Truong', affiliation: TUD },
-    { name: 'Adrian Pelcaru', affiliation: TUD },
+    { name: 'Bao Tran Truong', affiliation: TUD, photo: '/people/bao-tran-truong.jpg' },
+    { name: 'Adrian Pelcaru', affiliation: TUD, photo: '/people/adrian-pelcaru.jpg' },
     { name: 'Ezequiel Lopez-Lopez', affiliation: TUD, photo: '/people/ezequiel-lopez-lopez.jpg' },
   ]},
 ];
