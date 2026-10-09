@@ -13,12 +13,15 @@ interface Props {
 
 const {
   title,
-  description = 'NetSci Dresden 2027 — International Conference on Network Science at TU Dresden',
-  image = '/tu-dresden.jpeg',
+  description = 'International School and Conference on Network Science · 17–21 May 2027 · Dresden, Germany. Calls for abstracts and satellites are open.',
+  image = '/og-image.jpg',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://netsci-dresden.de');
-const siteOrigin = (Astro.site ?? new URL('https://netsci-dresden.de')).origin;
+const site = Astro.site ?? new URL('https://netsci2027.github.io');
+const canonicalURL = new URL(Astro.url.pathname, site);
+const siteOrigin = site.origin;
+// Absolute URL (with the base path) so link previews on LinkedIn, Slack, X etc. find the image.
+const imageURL = new URL(u(image), siteOrigin).href;
 
 const eventSchema = {
   '@context': 'https://schema.org',
@@ -29,15 +32,13 @@ const eventSchema = {
   endDate: '2027-05-21',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
-  url: siteOrigin,
-  image: new URL(image, siteOrigin).href,
+  url: new URL(u('/'), siteOrigin).href,
+  image: imageURL,
   location: {
     '@type': 'Place',
-    name: 'TU Dresden',
+    name: 'Dresden (venue to be announced)',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Helmholtzstraße 10',
-      postalCode: '01069',
       addressLocality: 'Dresden',
       addressCountry: 'DE',
     },
@@ -74,13 +75,16 @@ const eventSchema = {
     <meta property="og:url"         content={canonicalURL} />
     <meta property="og:title"       content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image"       content={image} />
+    <meta property="og:image"       content={imageURL} />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"    content="NetSci 2027 · International School & Conference on Network Science · May 17–21, 2027 · Dresden, Germany" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
     <meta name="twitter:title"       content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image"       content={image} />
+    <meta name="twitter:image"       content={imageURL} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={u('/favicon.svg')} />
