@@ -84,7 +84,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Philipp Lorenz-Spreen', affiliation: TUD, photo: '/people/philipp-lorenz-spreen.jpg' },
   ]},
   { role: 'Program Chairs', members: [
-    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
+    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig', photo: '/people/eckehard-olbrich.jpg' },
     { name: 'Nataša Djurdjevac Conrad', affiliation: 'Zuse Institute Berlin' },
     { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
     { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
@@ -104,7 +104,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
     { name: 'Diego Rybski', affiliation: 'Leibniz Institute of Ecological Urban and Regional Development (IÖR)' },
     { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark', photo: '/speakers/sune-lehmann.jpg' },
-    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
+    { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig', photo: '/people/eckehard-olbrich.jpg' },
   ]},
   { role: 'School Chair', members: [
     { name: 'Henrik Olsson', affiliation: 'Complexity Science Hub Vienna' },
