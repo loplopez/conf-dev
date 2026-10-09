@@ -91,7 +91,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark', photo: '/speakers/sune-lehmann.jpg' },
   ]},
   { role: 'Poster Chairs', members: [
-    { name: 'Jana Diesner', affiliation: 'Technical University of Munich' },
+    { name: 'Jana Diesner', affiliation: 'Technical University of Munich', photo: '/people/jana-diesner.jpg' },
     { name: 'Marc Timme', affiliation: TUD },
     { name: 'Diego Rybski', affiliation: 'Leibniz Institute of Ecological Urban and Regional Development (IÖR)' },
   ]},

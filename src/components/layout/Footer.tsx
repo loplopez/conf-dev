@@ -38,7 +38,7 @@ export default function Footer() {
                   aria-label={s.name}
                   className="w-8 h-8 rounded-full bg-white/10 hover:bg-tu-gold hover:text-tu-deep flex items-center justify-center transition-colors"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d={s.d} /></svg>
+                  <svg className="w-4 h-4" fill="currentColor" fillRule="evenodd" viewBox="0 0 24 24"><path d={s.d} /></svg>
                 </a>
               ))}
             </div>
