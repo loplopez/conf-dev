@@ -16,7 +16,7 @@ export interface DateItem {
 // Items mirror the netsci2026.com key-dates timeline; TBD where not decided yet.
 // Source for known dates: organising committee timeline + 6 Oct decisions.
 export const dates: DateItem[] = [
-  { short: 'TBD',       label: 'Registration and submissions open', date: 'TBD',              done: false },
+  { short: 'OCT 9',     label: 'Call for contributions',            date: '9 October 2026',   done: false },
   { short: 'NOV 15',    label: 'Satellite submission deadline',     date: '15 November 2026', done: false, highlight: true },
   { short: 'DEC 1',     label: 'Abstract submission deadline',      date: '1 December 2026', done: false },
   { short: 'TBD',       label: 'Satellite notification',            date: 'TBD',              done: false },

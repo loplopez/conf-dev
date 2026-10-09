@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import { committees } from '../../data/program';
+import { u } from '../../lib/url';
 ---
 
 <PageLayout
@@ -16,9 +17,13 @@ import { committees } from '../../data/program';
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {g.members.map((m) => (
             <div data-reveal class="bg-white rounded-2xl border border-tu-navy/10 shadow-card p-6 flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-tu-navy text-white font-display font-bold flex items-center justify-center shrink-0">
-                {m.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
-              </div>
+              {m.photo ? (
+                <img src={u(m.photo)} alt={m.name} class="w-12 h-12 rounded-full object-cover shrink-0" loading="lazy" />
+              ) : (
+                <div class="w-12 h-12 rounded-full bg-tu-navy text-white font-display font-bold flex items-center justify-center shrink-0">
+                  {m.name.split(' ').map((w) => w[0]).slice(0, 2).join('')}
+                </div>
+              )}
               <div>
                 <h3 class="font-display text-lg font-bold text-tu-deep leading-tight">{m.name}</h3>
                 {m.affiliation && <p class="text-sm text-tu-ink/70">{m.affiliation}</p>}

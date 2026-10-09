@@ -68,7 +68,7 @@ export const schedule: ScheduleDay[] = [
 // Affiliations verified from institutional pages, Oct 2026.
 export interface CommitteeGroup {
   role: string;
-  members: { name: string; affiliation: string }[];
+  members: { name: string; affiliation: string; photo?: string }[];
 }
 
 const TUD = 'TU Dresden';
@@ -77,7 +77,7 @@ export const committees: CommitteeGroup[] = [
   // Order agreed by the organising committee (7 Oct 2026): general chairs + local organizers first,
   // then program, poster and satellite chairs.
   { role: 'General Chairs & Local Organizers', members: [
-    { name: 'Dirk Brockmann', affiliation: TUD },
+    { name: 'Dirk Brockmann', affiliation: TUD, photo: '/people/dirk-brockmann.jpg' },
     { name: 'Franziska Derkum', affiliation: TUD },
     { name: 'Philipp Hövel', affiliation: 'Saarland University' },
     { name: 'Thordis Kombrink', affiliation: TUD },
@@ -125,6 +125,6 @@ export const committees: CommitteeGroup[] = [
   { role: 'Web Chairs', members: [
     { name: 'Bao Tran Truong', affiliation: TUD },
     { name: 'Adrian Pelcaru', affiliation: TUD },
-    { name: 'Ezequiel Lopez-Lopez', affiliation: TUD },
+    { name: 'Ezequiel Lopez-Lopez', affiliation: TUD, photo: '/people/ezequiel-lopez-lopez.jpg' },
   ]},
 ];
