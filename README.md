@@ -79,7 +79,7 @@ The same code builds two sites (see `.github/workflows/deploy.yml`):
 
 | Repo | URL | What it shows |
 |---|---|---|
-| `netsci2027/netsci2027.github.io` | https://netsci2027.github.io | Public site: landing page only, menu hidden |
+| `netsci2027/netsci2027.github.io` | https://netsci2027.github.io | Public site: full site with menu |
 | `loplopez/conf-dev` (or any other copy) | https://loplopez.github.io/conf-dev | Dev preview: full site with menu, for sharing with the team |
 
 Any repository other than `netsci2027/netsci2027.github.io` builds the full site under `/<repo-name>`;
@@ -95,4 +95,4 @@ git push dev main                                              # every time you 
 
 Internal links and `/public` assets must use `u('/path')` from `src/lib/url.ts` so they work under a sub-path such as `/conf-dev`.
 
-To launch the full public site, set `PUBLIC_FULL_SITE` to `'1'` for the main repo in the workflow.
+The public site has shown the full site since 9 Oct 2026 (`PUBLIC_FULL_SITE: '1'` in the workflow); set it back to `'0'` for a landing-page-only site.

@@ -31,14 +31,14 @@ jobs:
         run: npm ci
 
       # Same code, two kinds of site:
-      #   netsci2027/netsci2027.github.io -> public site at https://netsci2027.github.io/ (landing only)
+      #   netsci2027/netsci2027.github.io -> public site at https://netsci2027.github.io/ (full site, live since 9 Oct 2026)
       #   any other repo (e.g. loplopez/conf-dev) -> dev preview at https://<owner>.github.io/<repo>/ (full site + menu)
       - name: Build
         run: npm run build
         env:
           SITE_URL: ${{ format('https://{0}.github.io', github.repository_owner) }}
           BASE_PATH: ${{ github.repository == 'netsci2027/netsci2027.github.io' && '/' || format('/{0}', github.event.repository.name) }}
-          PUBLIC_FULL_SITE: ${{ github.repository == 'netsci2027/netsci2027.github.io' && '0' || '1' }}
+          PUBLIC_FULL_SITE: '1'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
