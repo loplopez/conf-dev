@@ -88,7 +88,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Nataša Djurdjevac Conrad', affiliation: 'Zuse Institute Berlin' },
     { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
     { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
-    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark' },
+    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark', photo: '/speakers/sune-lehmann.jpg' },
   ]},
   { role: 'Poster Chairs', members: [
     { name: 'Jana Diesner', affiliation: 'Technical University of Munich' },
@@ -103,7 +103,7 @@ export const committees: CommitteeGroup[] = [
   { role: 'Invited Speaker Chairs', members: [
     { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
     { name: 'Diego Rybski', affiliation: 'Leibniz Institute of Ecological Urban and Regional Development (IÖR)' },
-    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark' },
+    { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark', photo: '/speakers/sune-lehmann.jpg' },
     { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig' },
   ]},
   { role: 'School Chair', members: [
