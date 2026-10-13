@@ -20,7 +20,7 @@ const {
 const site = Astro.site ?? new URL('https://netsci2027.github.io');
 const canonicalURL = new URL(Astro.url.pathname, site);
 const siteOrigin = site.origin;
-// Absolute URL (with the base path) so link previews on LinkedIn, Slack, X etc. find the image.
+// Absolute URL (with the base path) so link previews on social media find the image.
 const imageURL = new URL(u(image), siteOrigin).href;
 
 const eventSchema = {

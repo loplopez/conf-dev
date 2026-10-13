@@ -87,7 +87,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Eckehard Olbrich', affiliation: 'MPI for Mathematics in the Sciences, Leipzig', photo: '/people/eckehard-olbrich.jpg' },
     { name: 'Nataša Djurdjevac Conrad', affiliation: 'Zuse Institute Berlin', photo: '/people/natasa-djurdjevac-conrad.jpg' },
     { name: 'Hiroki Sayama', affiliation: 'Binghamton University' },
-    { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
+    { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna', photo: '/people/mirta-galesic.jpg' },
     { name: 'Sune Lehmann', affiliation: 'Technical University of Denmark', photo: '/speakers/sune-lehmann.jpg' },
   ]},
   { role: 'Poster Chairs', members: [
@@ -113,7 +113,7 @@ export const committees: CommitteeGroup[] = [
     { name: 'Kathrin Busch', affiliation: 'University of Potsdam', photo: '/people/kathrin-busch.jpg' },
   ]},
   { role: 'Travel Awards Chair', members: [
-    { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna' },
+    { name: 'Mirta Galesic', affiliation: 'Complexity Science Hub Vienna', photo: '/people/mirta-galesic.jpg' },
   ]},
   { role: 'Sponsor Chair', members: [
     { name: 'Franziska Derkum', affiliation: TUD, photo: '/people/franziska-derkum.jpg' },
